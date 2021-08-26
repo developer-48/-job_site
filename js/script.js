@@ -16,3 +16,12 @@ $(function(){
         ]
     })
 })
+let vacanciesfavorites = document.querySelector(".vacancies__favorites-btn");
+vacanciesfavorites.addEventListener("click", () =>{
+    if(!vacanciesfavorites.classList.contains("active")){
+        vacanciesfavorites.classList.add("active");
+    }
+    else{
+        vacanciesfavorites.classList.remove("active");
+    }
+})

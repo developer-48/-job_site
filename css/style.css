@@ -135,7 +135,7 @@ a{
 }
 
 .content__search-field{
-    height: 20px;
+    height: 100%;
     width: 100%;
     margin:0 18px;
     font-size: 18px;
@@ -181,7 +181,12 @@ a{
     justify-content: space-between;
     height: 48px;
 }
+.content__filters-container{
+    position: relative;
+}
 .content__filters-item{
+    position: relative;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,7 +198,28 @@ a{
     font-weight: 600;
     cursor: pointer;
 }
-
+.content__filters-popup{
+    width: 530px;
+    height: 274px;
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    top: 77px;
+    left: calc((530px - 100%) / 2 * -1);
+    border-radius: 12px;
+    box-shadow: 0 0 15px #85838383;
+    z-index: 3;
+}
+.filters-popup__arrow{
+    position: absolute;
+    left: 253px;
+    top: -12px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #fff;
+}
 .content__filters-line{
     margin: 0 11px;
 }
@@ -297,11 +323,28 @@ a{
 }
 .vacancies__favorites-btn{
     top: 30px;
+    height: 28px;
+    width: 28px;
     background: none;
+    background: url(/img/favorites-btn.png) no-repeat;
     outline: none;
     border: none;
     cursor: pointer;
+    transition: .3s all;
 }
+
+.vacancies__favorites-btn:hover{
+    /* background: url(/img/favorites-btn_active.png) no-repeat; */
+    transform: scale(1.1);    
+}
+
+.vacancies__favorites-btn.active{
+    background: url(/img/favorites-btn_active.png) no-repeat;
+}
+/* .vacancies__favorites-btn.active:hover{
+    background: url(/img/favorites-btn.png) no-repeat;
+} */
+
 .content-two__vacancies-icon{
     bottom: 30px;
 }
@@ -359,10 +402,16 @@ a{
     background-color: #5B04B2;
     color: #fff;
     margin-right: 40px;
+    transition: .3s all;
 }
+
 .content-two__vacancies-call-btn{
     width: 207px;
     background-color: #EFEDF0;
     color: #26004D;
+    transition: .3s all;
 }
 
+.content-two__vacancies-response-btn:hover,.content-two__vacancies-call-btn:hover{
+    transform: scale(1.06);
+}
