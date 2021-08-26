@@ -1,27 +1,17 @@
 $(function(){
     $(".content-two__slider").slick({
-        centerMode: true,
-        centerPadding: '160px',
-        slidesToShow: 4,
-        slidesScroll: 4,
+        slidesToShow: 5,
+        slidesToScroll: 4,
+        speed: 1000,
+        infinite: false,
+        waitForAnimate: false,
         responsive: [
             {
-            breakpoint: 768,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
-            }
-            },
-            {
-            breakpoint: 480,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1
-            }
+                breakpoint: 1200,
+                settings: {
+                    slidesToScroll: 2,
+                    variableWidth: true,
+                }
             }
         ]
     })

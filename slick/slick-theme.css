@@ -29,9 +29,6 @@
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-
-    cursor: pointer;
-
     border: none;
     outline: none;
 
@@ -42,6 +39,10 @@
     box-shadow: 0 0 30px #474747bd;
     transition: 0.3s all;
     transform: rotate(0.1);
+}
+.slick-disabled{
+    opacity: 0;
+    cursor: context-menu;
 }
 
 .slick-prev
