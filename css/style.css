@@ -504,7 +504,7 @@ a{
     margin: auto;
     box-shadow: 0 0 15px #85838349;
     position: relative;
-    padding: 50px 95px;
+    padding: 40px 95px;
     color: #383543;
 }
 
@@ -584,11 +584,10 @@ a{
 
 .autorization__bottom{
     position: absolute;
-    bottom: 45px;
+    top: 780px;
     left: 0;
     right: 0;
     margin: auto;
-    /* margin-top: 10px; */
     color: #383543;
     max-width: 620px;
     padding-top: 12px;
@@ -599,7 +598,7 @@ a{
     font-size: 12px;
     text-align: center;
     font-size: 500;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
 }
 
 .autorization__bottom-title a{
@@ -607,7 +606,7 @@ a{
 }
 
 .autorization__form-login{
-    /* display: none; */
+    display: none;
     position: absolute;
     transition: .5s;
     opacity: 0;

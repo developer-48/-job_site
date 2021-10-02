@@ -66,19 +66,24 @@
     <script>
         let loginBtn = document.querySelector(".registration-subtitleBtn");
         let registrationBtn = document.querySelector(".login-subtitleBtn");
+        let politiks = document.querySelector(".autorization__bottom-title");
         let registrationBlock = document.querySelector(".autorization__form-registration");
         let loginBlock = document.querySelector(".autorization__form-login");
         loginBtn.addEventListener("click", () =>{
             loginBlock.style.display = "block";
             loginBlock.style.opacity = "1";
             registrationBlock.style.opacity = "0";
+            politiks.style.opacity = "0";
             setTimeout(() => {                
                 registrationBlock.style.display = "none";
+                // politiks.style.display = "none";
             }, 300)
         })
         registrationBtn.addEventListener("click", () =>{
             registrationBlock.style.display = "block";
+            // politiks.style.display = "block";
             registrationBlock.style.opacity = "1";
+            politiks.style.opacity = "1";
             loginBlock.style.opacity = "0";
             setTimeout(() => {                
                 loginBlock.style.display = "none";
