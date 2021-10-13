@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./slick/slick.css">
     <link rel="stylesheet" href="./slick/slick-theme.css">
-    <link rel="stylesheet" href="./css/select.css">
 </head>
 <body>
     <div class="header">
@@ -62,18 +61,12 @@
                     <div class="content__filters-item">Тип занятости <img src="./img/line.png" alt="" class="content__filters-line"> <span> Любой</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
                     <div class="content__filters-popup" style="display: block;">
                         <div class="filters-popup__arrow"></div>
-                        <div class="selectWr">
-                            <h2>Select vanilla js</h2>
-                            <label for="custom">
-                               <select name="custom" id="custom">
-                                     <option value="1">Dollar</option>
-                                     <option value="2">Bitcoin</option>
-                                     <option value="3" selected>Ethereum</option>
-                                     <option value="4">Litecoin</option>
-                                     <option value="5">Tether</option>
-                               </select>
-                            </label>
-                        </div>
+                        <select class="select" name="language">
+                            <option disabled>Выбрать</option>
+                            <option value="HTML">HTML</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="PHP">PHP</option>
+                        </select>
                     </div>
                 </div>
                 <div class="content__filters-container content__filters-">
