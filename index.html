@@ -40,7 +40,7 @@
             <div class="content__filters">
                 <div class="content__filters-container">
                     <div class="content__filters-item content__filters-item-salary">Зарплата <img src="./img/line.png" alt="" class="content__filters-line"> <span>Любая</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
-                    <div class="content__filters-popup">
+                    <div class="content__filters-popup ">
                         <div class="filters-popup__arrow"></div>
                         <div class="content__filters-salary">
                             <div class="content__filters-top">
@@ -57,16 +57,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="content__filters-container content__filters-">
+                <div class="content__filters-container content__filters-typeEmployment">
                     <div class="content__filters-item">Тип занятости <img src="./img/line.png" alt="" class="content__filters-line"> <span> Любой</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
                     <div class="content__filters-popup" style="display: block;">
                         <div class="filters-popup__arrow"></div>
-                        <select class="select" name="language">
-                            <option disabled>Выбрать</option>
-                            <option value="HTML">HTML</option>
-                            <option value="JavaScript">JavaScript</option>
-                            <option value="PHP">PHP</option>
+                        <label class = "typeEmployment__watch-Lable">Работа вахтой</label>
+                        <select class="select typeEmployment__watch-select" name="language">
+                            <option class="typeEmployment__watch-item"  disabled>Неважно</option>
+                            <option class="typeEmployment__watch-item" value="Только вахта">Только вахта</option>
+                            <option class="typeEmployment__watch-item" value="Без вахты">Без вахты</option>
                         </select>
+                        <label class = "typeEmployment__remoteWork-Lable">Удаленная работа</label>
+                        <select class="select typeEmployment__remoteWork-select" name="language">
+                            <option class="typeEmployment__remoteWork-item"  disabled>Неважно</option>
+                            <option class="typeEmployment__remoteWork-item" value="Только вахта">Только удаленная</option>
+                            <option class="typeEmployment__remoteWork-item" value="Без вахты">Без удаленной</option>
+                        </select>
+                        <button class="content__filters-applyBtn typeEmloement__Btn">Применить</button>
                     </div>
                 </div>
                 <div class="content__filters-container content__filters-">

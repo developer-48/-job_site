@@ -207,7 +207,7 @@ a{
 }
 
 .content__filters-popup{
-    width: 530px;
+    width: 480px;
     /* height: 280px; */
     font-size: 18px;
     font-weight: 700;
@@ -216,7 +216,7 @@ a{
     background-color: #fff;
     display: none;
     top: 77px;
-    left: calc((530px - 100%) / 2 * -1);
+    left: calc((480px - 100%) / 2 * -1);
     border-radius: 12px;
     box-shadow: 0 0 15px #85838383;
     z-index: 2;
@@ -224,7 +224,7 @@ a{
 
 .filters-popup__arrow{
     position: absolute;
-    left: 253px;
+    left: 228px;
     top: -12px;
     width: 0;
     height: 0;
@@ -467,8 +467,7 @@ a{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-top: 30px;
-    margin-bottom: 25px;    
+    margin-top: 30px;   
 }
 .content__paymentChange{
     /* position: relative; */
@@ -508,6 +507,7 @@ a{
     font-size: 18px;
     font-weight: 700;
     transition: .3s all;
+    margin-top: 25px; 
 }
 
 .content__filters-applyBtn:hover{    
@@ -525,11 +525,25 @@ a{
     border-radius: 10px;
 }
 
+.typeEmployment__watch-Lable, .typeEmployment__remoteWork-Lable{
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.typeEmployment__remoteWork-Lable{
+    margin-top: 15px;
+}
+
+.typeEmployment__remoteWork-select{
+    
+}
+
+
 /* select */
 
 .select {
     display: block;
-    max-width: 215px;
     width: 100%;
     position: relative;
 }
@@ -541,6 +555,9 @@ a{
     padding: 10px 15px;
     cursor: pointer;
     user-select: none;
+    font-size: 14px;
+    /* background: url(/img/select\ arrow-down.png) no-repeat center right 10px; */
+    
 }
 
 .new-select__list {
@@ -550,11 +567,12 @@ a{
     border: 1px solid #646464;
     border-radius: 10px;
     margin-top: 10px;
+    padding: -1px 5px;
     cursor: pointer;
     width: 100%;
     z-index: 2;
     background: #fff;
-    user-select: none;
+    font-size: 14px;
 }
 
 .new-select__list.on {
@@ -563,26 +581,33 @@ a{
 
 .new-select__item span {
     display: block;
-    padding: 10px 15px;
+    padding: 10px 15px;    
+}
+
+.new-select__item{
+    width: 98.7%;
+    margin: 3px auto;
+    border-radius: 10px;
+    transition: .3s all;
 }
 
 .new-select__item.active{
-    background-color: #a98ec5;
+    background-color: #a0a0a0;
 }
 
-.new-select__item span:hover {
-    color: #12b223;
+.new-select__item:hover{
+    background-color: #a0a0a0;
 }
 
 .new-select:after {
     content: '';
     display: block;
-    width: 25px;
-    height: 25px;
+    width: 16px;
+    height: 16px;
     position: absolute;
     right: 9px;
-    top: 9px;
-    background: url('path-to-image') no-repeat right center / cover;
+    top: 33%;
+    background: url(/img/select\ arrow-down.png) no-repeat right center / cover;
     opacity: 0.6;
 
     -webkit-transition: all .27s ease-in-out;
