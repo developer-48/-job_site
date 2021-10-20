@@ -40,7 +40,7 @@
             <div class="content__filters">
                 <div class="content__filters-container">
                     <div class="content__filters-item content__filters-item-salary">Зарплата <img src="./img/line.png" alt="" class="content__filters-line"> <span>Любая</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
-                    <div class="content__filters-popup ">
+                    <div class="content__filters-popup content__filters-popup-salary">
                         <div class="filters-popup__arrow"></div>
                         <div class="content__filters-salary">
                             <div class="content__filters-top">
@@ -57,9 +57,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="content__filters-container content__filters-typeEmployment">
-                    <div class="content__filters-item">Тип занятости <img src="./img/line.png" alt="" class="content__filters-line"> <span> Любой</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
-                    <div class="content__filters-popup" style="display: block;">
+                <div class="content__filters-container">
+                    <div class="content__filters-item content__filters-item-typeEmployment">Тип занятости <img src="./img/line.png" alt="" class="content__filters-line"> <span> Любой</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
+                    <div class="content__filters-popup content__filters-popup-typeEmployment">
                         <div class="filters-popup__arrow"></div>
                         <label class = "typeEmployment__watch-Lable">Работа вахтой</label>
                         <select class="select typeEmployment__watch-select" name="language">
@@ -77,14 +77,14 @@
                     </div>
                 </div>
                 <div class="content__filters-container content__filters-">
-                    <div class="content__filters-item">Условия работы <img src="./img/line.png" alt="" class="content__filters-line"> <span> Любые</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
-                    <div class="content__filters-popup">
+                    <div class="content__filters-item content__filters-item-conditions">Условия работы <img src="./img/line.png" alt="" class="content__filters-line"> <span> Любые</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
+                    <div class="content__filters-popup content__filters-popup-conditions">
                         <div class="filters-popup__arrow"></div>
                     </div>
                 </div>
                 <div class="content__filters-container content__filters-">
-                    <div class="content__filters-item">Больше фильтров <img src="./img/line.png" alt="" class="content__filters-line"> <span> Не выбрано</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
-                    <div class="content__filters-popup">
+                    <div class="content__filters-item content__filters-item-more">Больше фильтров <img src="./img/line.png" alt="" class="content__filters-line"> <span> Не выбрано</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
+                    <div class="content__filters-popup content__filters-popup-more">
                         <div class="filters-popup__arrow"></div>
                     </div>
                 </div>
@@ -186,6 +186,28 @@
             }
 
         };
+
+        let contentFiltersPopup = $(".content__filters-popup");
+        let contentFiltersItem = $(".content__filters-item");
+        contentFiltersItem.on("click", (event) => {
+            // console.log(contentFiltersPopup)
+            for(let item of contentFiltersPopup){
+                item.style.display = "none"
+            }
+            let filter = (event.target.classList.contains("content__filters-item"))? event.target : event.target.parentNode
+            if(filter.classList.contains('content__filters-item-salary')){
+                $('.content__filters-popup-salary').show()
+            }
+            else if(filter.classList.contains('content__filters-item-typeEmployment')){
+                $('.content__filters-popup-typeEmployment').show()
+            }
+            else if(filter.classList.contains('content__filters-item-conditions')){
+                $('.content__filters-popup-conditions').show()
+            }
+            else if(filter.classList.contains('content__filters-item-more')){
+                $('.content__filters-popup-more').show()
+            }
+        })
     </script>
 </body>
 </html>
