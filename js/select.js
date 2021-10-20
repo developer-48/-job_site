@@ -12,7 +12,7 @@ const selectFunc = (name) =>{
         _this.wrap('<div class="select"></div>');
         $('<div>', {
             class: 'new-select',
-            text: _this.children('option:disabled').text()
+            text: _this.children('.active').text()
         }).insertAfter(_this);
     
         const selectHead = _this.next('.new-select');
@@ -21,9 +21,9 @@ const selectFunc = (name) =>{
         }).insertAfter(selectHead);
     
         const selectList = selectHead.next('.new-select__list');
-        for (let i = 1; i < selectOptionLength; i++) {
+        for (let i = 0; i < selectOptionLength; i++) {
             $('<div>', {
-                class: 'new-select__item',
+                class: `new-select__item ${(i == 0)? 'active': ''}`,
                 html: $('<span>', {
                     text: selectOption.eq(i).text()
                 })
@@ -42,7 +42,6 @@ const selectFunc = (name) =>{
                 selectItem.on('click', function() {
                     let chooseItem = $(this).data('value');
                     $(`.${name}-new-select__list div`).removeClass("active")
-                    console.log($(".new-select__list div"))
                     if(!$(this).hasClass('active')){                    
                         $(this).addClass('active')
                     }

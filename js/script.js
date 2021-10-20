@@ -16,13 +16,13 @@ $(function(){
         ]
     })
 })
-let vacanciesfavorites = document.querySelector(".vacancies__favorites-btn");
-vacanciesfavorites.addEventListener("click", () =>{
-    if(!vacanciesfavorites.classList.contains("active")){
-        vacanciesfavorites.classList.add("active");
+let vacanciesfavorites = $(".vacancies__favorites-btn");
+vacanciesfavorites.on("click", () =>{
+    if(!vacanciesfavorites.hasClass("active")){
+        vacanciesfavorites.addClass("active");
     }
     else{
-        vacanciesfavorites.classList.remove("active");
+        vacanciesfavorites.removeClass("active");
     }
 })
 

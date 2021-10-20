@@ -176,74 +176,6 @@ a{
     color: #26004D;
 }
 
-.content__filters{
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    height: 48px;
-}
-.content__filters-container{
-    position: relative;
-}
-.content__filters-item{
-    height: 48px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #26004D;
-    border-radius: 12px;
-    color: #fff;
-    padding: 0 17px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s all;
-}
-
-.content__filters-item span{
-    width: 100px;
-    text-align: center;
-}
-
-.content__filters-popup{
-    width: 480px;
-    /* height: 280px; */
-    font-size: 18px;
-    font-weight: 700;
-    padding: 30px 42px 27px;
-    position: absolute;
-    background-color: #fff;
-    display: none;
-    top: 77px;
-    left: calc((480px - 100%) / 2 * -1);
-    border-radius: 12px;
-    box-shadow: 0 0 15px #85838383;
-    z-index: 2;
-}
-
-.filters-popup__arrow{
-    position: absolute;
-    left: 228px;
-    top: -12px;
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-bottom: 12px solid #fff;
-}
-.content__filters-line{
-    margin: 0 11px;
-}
-
-.content__filters-item span{
-    color: #A5A1B2;
-}
-
-.content__filters-arrow{
-    margin-left: 7px;
-}
-
 .content-two{
     padding-top: 105px;
     background: #FFFFFF;
@@ -428,6 +360,88 @@ a{
     transform: scale(1.06);
 }
 
+/* content-filters */
+
+.content__filters{
+    margin-top: 40px;
+    display: flex;
+    /* justify-content: space-between; */
+    height: 48px;
+}
+.content__filters-container{
+    position: relative;
+    margin-right: 20px;
+}
+
+
+.content__filters-item{
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #26004D;
+    border-radius: 12px;
+    color: #fff;
+    padding: 0 17px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.content__filters-item.active{
+    background-color: #5B04B2;
+}
+
+.content__filters-item span{
+    width: 100px;
+    text-align: center;
+}
+
+.content__filters-popup{
+    width: 480px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 30px 42px 27px;
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    top: 77px;
+    left: calc((480px - 100%) / 2 * -1);
+    border-radius: 12px;
+    box-shadow: 0 0 15px #85838383;
+    z-index: 2;
+    transition: .3s all;
+    opacity: 0;
+}
+
+.content__filters-popup.active{
+    display: block;
+}
+
+.filters-popup__arrow{
+    position: absolute;
+    left: 228px;
+    top: -12px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #fff;
+}
+.content__filters-line{
+    margin: 0 11px;
+}
+
+.content__filters-item span{
+    color: #A5A1B2;
+}
+
+.content__filters-arrow{
+    margin-left: 7px;
+}
+
 .content__filters-top{
     display: flex;
     justify-content: space-between;
@@ -515,6 +529,63 @@ a{
     color: #6B24B2;
 }
 
+.content-conditions__checkbox-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.content-conditions__checkbox {
+     display: none; 
+}
+.content-conditions__label {
+    display: flex;
+    align-items: center;
+    position: relative;   
+    transition: 0.3s;
+    min-height: 20px;
+    margin-left: 35px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+.content-conditions__label::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 20px; 
+    height: 20px;
+    left: -35px;
+    transition: 0.3s;
+    border: 1px solid #26004D;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.content-conditions__checkbox:checked + .content-conditions__label::before {
+    background: url(/img/checkmark.png) center #7f3ec0;
+    background-size: 100%;
+}
+
+.content-conditions__checkbox-container:hover{
+    transform: scale(1.1);
+    margin-left: 16px;
+}
+
+.disabledPerson-icon{
+    display: block;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.conditions__Btn{
+    margin-top: 10px;
+}
+
 .selectWr{
     width: 100%;
     height: 40px;
@@ -533,10 +604,6 @@ a{
 
 .typeEmployment__remoteWork-Lable{
     margin-top: 15px;
-}
-
-.typeEmployment__remoteWork-select{
-    
 }
 
 
@@ -592,11 +659,13 @@ a{
 }
 
 .new-select__item.active{
-    background-color: #a0a0a0;
+    background-color: #7b50a5;
+    color: #fff;
 }
 
 .new-select__item:hover{
-    background-color: #a0a0a0;
+    background-color: #7b50a5;
+    color: #fff;
 }
 
 .new-select:after {
