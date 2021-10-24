@@ -20,7 +20,7 @@
                 </div>
                 <div class="header__buttons">
                     <div class="header__btn-createResume">Создать резюме</div>
-                    <div class="header__btn-hiring">Найм</div>
+                    <a href="#"><div class="header__btn-hiring">Личный кабинет</div></a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
             </form>
             <div class="content__filters">
                 <div class="content__filters-container">
-                    <div class="content__filters-item content__filters-item-salary">Зарплата <img src="./img/line.png" alt="" class="content__filters-line"> <span>Любая</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
+                    <div class="content__filters-item content__filters-item-salary">Зарплата <img src="./img/line.png" alt="" class="content__filters-line"> <span class="content__filters-item-val">Любая</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
                     <div class="content__filters-popup content__filters-popup-salary">
                         <div class="filters-popup__arrow"></div>
                         <div class="content__filters-salary">
@@ -55,12 +55,12 @@
                                 <div class="content__paymentChange content__filters-relay">За смену</div>
                                 <div class="content__paymentChange content__filters-hour">За час</div>
                             </div>
-                            <button class="content__filters-applyBtn">Применить</button>
+                            <button class="content__filters-applyBtn salary-apply">Применить</button>
                         </div>
                     </div>
                 </div>
                 <div class="content__filters-container">
-                    <div class="content__filters-item content__filters-item-typeEmployment">Тип занятости <img src="./img/line.png" alt="" class="content__filters-line"> <span> Любой</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
+                    <div class="content__filters-item content__filters-item-typeEmployment">Тип занятости <img src="./img/line.png" alt="" class="content__filters-line"> <span class="content__filters-item-val  typeEmployment-value"> Любой</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
                     <div class="content__filters-popup content__filters-popup-typeEmployment">
                         <div class="filters-popup__arrow"></div>
                         <label class = "typeEmployment__watch-Lable">Работа вахтой</label>
@@ -75,40 +75,34 @@
                             <option class="typeEmployment__remoteWork-item" value="Только вахта">Только удаленная</option>
                             <option class="typeEmployment__remoteWork-item" value="Без вахты">Без удаленной</option>
                         </select>
-                        <button class="content__filters-applyBtn typeEmloement__Btn">Применить</button>
+                        <button class="content__filters-applyBtn typeEmloement-apply">Применить</button>
                     </div>
                 </div>
                 <div class="content__filters-container content__filters-">
-                    <div class="content__filters-item content__filters-item-conditions">Условия работы <img src="./img/line.png" alt="" class="content__filters-line"> <span> Любые</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
+                    <div class="content__filters-item content__filters-item-conditions">Условия работы <img src="./img/line.png" alt="" class="content__filters-line"> <span class="content__filters-item-val conditions-value"> Любые</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
                     <div class="content__filters-popup content__filters-popup-conditions">
                         <div class="filters-popup__arrow"></div>
                         <div class="content-filters__conditions">
                             <div class="content-conditions__checkbox-container">
-                                <input type="checkbox" name="" id="partTime" class="content-conditions__checkbox">
-                                <label for="partTime" class="content-conditions__label">Неполный рабочий день</label>
+                                <input type="checkbox" name="" id="partTime" class="content-conditions__checkbox conditions-partTime">
+                                <label for="partTime" class="content-conditions__label conditions-partTime__label">Неполный рабочий день</label>
                             </div>
                             <div class="content-conditions__checkbox-container">
-                                <input type="checkbox" name="" id="notExperience" class="content-conditions__checkbox">
-                                <label for="notExperience" class="content-conditions__label">Без опыта</label>
+                                <input type="checkbox" name="" id="notExperience" class="content-conditions__checkbox conditions-notExperience">
+                                <label for="notExperience" class="content-conditions__label conditions-notExperience__label">Без опыта</label>
                             </div>
                             <div class="content-conditions__checkbox-container">
-                                <input type="checkbox" name="" id="minor" class="content-conditions__checkbox">
-                                <label for="minor" class="content-conditions__label">Можно до 18 лет</label>
+                                <input type="checkbox" name="" id="minor" class="content-conditions__checkbox conditons-minor">
+                                <label for="minor" class="content-conditions__label conditons-minor__label">Можно до 18 лет</label>
                             </div>
                             <div class="content-conditions__checkbox-container">
-                                <input type="checkbox" name="" id="disabledPerson" class="content-conditions__checkbox">
-                                <label for="disabledPerson" class="content-conditions__label">Доступно <img class="disabledPerson-icon" src="/img/disbledPerson-icon.svg" alt=""></label>
+                                <input type="checkbox" name="" id="disabledPerson" class="content-conditions__checkbox conditions-disabledPerson">
+                                <label for="disabledPerson" class="content-conditions__label conditions-disabledPerson__label">Доступно <img class="disabledPerson-icon" src="/img/disbledPerson-icon.svg" alt=""></label>
                             </div>
-                            <button class="content__filters-applyBtn conditions__Btn">Применить</button>
+                            <button class="content__filters-applyBtn conditions-apply">Применить</button>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="content__filters-container content__filters-">
-                    <div class="content__filters-item content__filters-item-more">Больше фильтров <img src="./img/line.png" alt="" class="content__filters-line"> <span> Не выбрано</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
-                    <div class="content__filters-popup content__filters-popup-more">
-                        <div class="filters-popup__arrow"></div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
@@ -190,115 +184,5 @@
     <script src="./slick/slick.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/select.js"></script>
-    <script>
-        // let salarySlyder = document.querySelector(".content__filters-salary-slider");
-        // let salaryMeaning = document.querySelector(".content__filters-salary-meaning");
-        // let salaryMeaningFilters = document.querySelector(".content__filters-item-salary span")
-        // salarySlyder.oninput = function() {
-        //     var value = (this.value-this.min)/(this.max-this.min)*100
-        //     this.style.background = 'linear-gradient(to right, #6B24B2 0%, #6B24B2 ' + value + '%, #b9b9b9 ' + value + '%, #b9b9b9 100%)'
-        //     if(this.value == 0){
-        //         salaryMeaningFilters.innerText = "Любая";
-        //         salaryMeaning.innerText = "Любая";
-        //     }
-        //     else{
-        //         salaryMeaningFilters.innerText = `${this.value} руб`;
-        //         salaryMeaning.innerText = `${this.value} руб`;
-        //     }
-
-        // };
-        let salarySlyder = $(".content__filters-salary-slider");
-        let salaryMeaning = $(".content__filters-salary-meaning");
-        let salaryMeaningFilters = $(".content__filters-item-salary span")
-        let sliderFunction = (event) => {
-            let _this = event.target;
-            var value = (_this.value-_this.min)/(_this.max-_this.min)*100
-            _this.style.background = 'linear-gradient(to right, #6B24B2 0%, #6B24B2 ' + value + '%, #b9b9b9 ' + value + '%, #b9b9b9 100%)'
-            if(_this.value == 0){
-                salaryMeaningFilters.text("Любая");
-                salaryMeaning.text("Любая");
-            }
-            else{
-                salaryMeaningFilters.text(`${_this.value} руб`);
-                salaryMeaning.text(`${_this.value} руб`);
-            }
-
-        }
-        salarySlyder.on("input", sliderFunction);
-
-        let contentPaymentChange = $(".content__paymentChange");
-        contentPaymentChange.on("click", (event) => {
-            let sliderParrent = $(".content__filters-salary-parrent");
-            let ResetSlider = (max, step) =>{
-                sliderParrent.empty()
-                sliderParrent.append(
-                    $(
-                        `<input min="0" max=${max} step = ${step} data- value="0" type="range" name="salary" oninput = "sliderFunction(event)" class="content__filters-salary-slider"/>`
-                    )
-                )
-            }
-            let clblock = event.target;
-            if(!clblock.classList.contains("active")){
-                contentPaymentChange.removeClass("active");
-                clblock.classList.add("active")
-                if(clblock.innerText == "За месяц"){
-                    salaryMeaningFilters.text("Любая");
-                    salaryMeaning.text("Любая");
-                    ResetSlider(150000, 5000)
-                }
-                else if(clblock.innerText == "За смену"){
-                    salaryMeaningFilters.text("Любая");
-                    salaryMeaning.text("Любая");
-                    ResetSlider(20000, 400)
-                }
-                else{
-                    salaryMeaningFilters.text("Любая");
-                    salaryMeaning.text("Любая");
-                    ResetSlider(5000, 50)
-                }
-                
-            }
-        })
-
-
-        let contentFiltersPopup = $(".content__filters-popup");
-        let contentFiltersItem = $(".content__filters-item");
-        contentFiltersItem.on("click", (event) => {
-            // for(let item of contentFiltersPopup){
-            //     item.style.display = "none"
-            // }
-            contentFiltersPopup.fadeOut(200)            
-            
-            let filter = (event.target.classList.contains("content__filters-item"))? event.target : event.target.parentNode;
-            if(filter.classList.contains("active")){
-                filter.classList.remove("active")
-                console.log("есть")
-            }
-            else{
-                contentFiltersItem.removeClass("active")
-                filter.classList.add("active")
-                console.log("нет")
-            }
-            if(filter.classList.contains('content__filters-item-salary')){
-                $('.content__filters-popup-salary').addClass("active")
-                $('.content__filters-popup-salary').fadeTo(200, 1)    
-            }
-            else if(filter.classList.contains('content__filters-item-typeEmployment')){
-                $('.content__filters-popup-typeEmployment').addClass("active")
-                $('.content__filters-popup-typeEmployment').fadeTo(200, 1) 
-
-            }
-            else if(filter.classList.contains('content__filters-item-conditions')){
-                $('.content__filters-popup-conditions').addClass("active")
-                $('.content__filters-popup-conditions').fadeTo(200, 1) 
-
-            }
-            else if(filter.classList.contains('content__filters-item-more')){
-                $('.content__filters-popup-more').addClass("active")
-                $('.content__filters-popup-more').fadeTo(200, 1) 
-
-            }
-        })
-    </script>
 </body>
 </html>

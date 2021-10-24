@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,36 +17,38 @@
             <div class="autorization__container">
                 <div class="autorization__form autorization__form-registration">
                     <div class="autorization__form-title">Регистрируйся!</div>
-                    <form action="" class="autorization__form-item">
+                    <form class="autorization__form-item" role="form">
                         <div class="autorization__form-group">
-                            <label for="" class="autorization__form-label">Введите имя пользователя или email:</label>
-                            <input type="text" class="autorization__form-input">
+                            <label for="" class="autorization__form-label">Введите email:</label>
+                            <input name="Email" type="text" class="autorization__form-input registration__form-loginInput">
                         </div>
                         <div class="autorization__form-group">
                             <label for="" class="autorization__form-label">Введите пароль:</label>
-                            <input type="password" class="autorization__form-input">
+                            <input name="Password" type="password" class="autorization__form-input registration__form-passwordInput">
                         </div>
                         <div class="autorization__form-group">
                             <label for="" class="autorization__form-label">Повторите пароль:</label>
-                            <input type="password" class="autorization__form-input">
+                            <input name="ConfirmPassword" type="password" class="autorization__form-input registration__form-passwordTwoInput">
                         </div>
-                        <button type="submit" class="autorization__form-btn">Зарегистрировать</button>
+                        <div class="registration__error"></div>
+                        <button type="submit" class="autorization__form-btn registrationBtn">Зарегистрировать</button>
                     </form>
                     <div class="autorization__form-subtitle">Есть аккаунт? <span class="autorization__form-subtitleBtn registration-subtitleBtn">Войдите!</span></div>
                 </div>
                 <div class="autorization__form autorization__form-login">
                     <div class="autorization__form-title">C возвращением!</div>
-                    <form action="" class="autorization__form-item">
+                    <form class="autorization__form-item">
                         <div class="autorization__form-group">
-                            <label for="" class="autorization__form-label">Введите имя пользователя или email<span>*</span></label>
-                            <input type="text" class="autorization__form-input">
+                            <label for="" class="autorization__form-label">Введите email<span>*</span></label>
+                            <input name="Email" type="text" class="autorization__form-input autorization__form-loginInput">
                         </div>
                         <div class="autorization__form-group">
                             <label for="" class="autorization__form-label">Введите пароль<span>*</span></label>
-                            <input type="password" class="autorization__form-input">
+                            <input name="Password" type="password" class="autorization__form-input autorization__form-passwordInput">
                         </div>
-                        <div class="autorization__form-buttons">
-                            <button type="submit" class="autorization__form-btn">Войти</button>
+                        <div class="autorization__error"></div>
+                        <div class="autorization__form-buttons">                            
+                            <button type="submit" class="autorization__form-btn autorizationBtn">Войти</button>
                         </div>
                     </form>
                     <div class="autorization__form-subtitle">Нет аккаунта? <span class="autorization__form-subtitleBtn login-subtitleBtn">Регистрируйтесь!</span></div>
@@ -63,7 +65,9 @@
             </div>
         </div>
     </div>
+    <script src="/js/jquery-3.6.0.min.js"></script>
     <script>
+        
         let loginBtn = document.querySelector(".registration-subtitleBtn");
         let registrationBtn = document.querySelector(".login-subtitleBtn");
         let politiks = document.querySelector(".autorization__bottom-title");
@@ -88,6 +92,192 @@
             setTimeout(() => {                
                 loginBlock.style.display = "none";
             }, 300)
+        })
+        let autorizationBtn = $(".autorizationBtn")
+        autorizationBtn.on("click", (event) => {
+            event.preventDefault()
+            let login = $(".autorization__form-loginInput").val()
+            let password = $(".autorization__form-passwordInput").val()
+            if(login != "" && password != ""){
+                $(".autorization__error").text("")
+                let data = {
+                    "login": login,
+                    "password": password,
+                }
+                console.log(data)
+            }
+            else{
+                $(".autorization__error").text("Необходимо заполнить все поля*")
+            }
+        })
+
+        let _registrationBtn = $(".registrationBtn")
+        _registrationBtn.on("click", (event) => {
+            event.preventDefault()
+            let login = $(".registration__form-loginInput").val()
+            let password = $(".registration__form-passwordInput").val()
+            let passwordTwo = $(".registration__form-passwordTwoInput").val()
+            if(login != "" && password != "" && passwordTwo != ""){
+                $(".registration__error").text("")
+                if(password == passwordTwo){
+                    let data = {
+                        "login": login,
+                        "password": password,
+                    }
+                    
+                }
+                else{
+                    $(".registration__error").text("Пароли не совпадают*")
+                }
+            }
+            else{
+                $(".registration__error").text("Необходимо заполнить все поля*")
+            }
+        })
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="autorization">
+        <div class="autorization__content">
+            <div class="autorization__top">
+                <a href="/" class="autorization__logo"><img src="/img/logo-two.png" alt=""></a>
+                <a href="/" class="autorization__notreen"><img src="/img/notreen-logo.png" alt=""></a>
+            </div>
+            <div class="autorization__container">
+                <div class="autorization__form autorization__form-registration">
+                    <div class="autorization__form-title">Регистрируйся!</div>
+                    <form class="autorization__form-item" role="form">
+                        <div class="autorization__form-group">
+                            <label for="" class="autorization__form-label">Введите email:</label>
+                            <input name="Email" type="text" class="autorization__form-input registration__form-loginInput">
+                        </div>
+                        <div class="autorization__form-group">
+                            <label for="" class="autorization__form-label">Введите пароль:</label>
+                            <input name="Password" type="password" class="autorization__form-input registration__form-passwordInput">
+                        </div>
+                        <div class="autorization__form-group">
+                            <label for="" class="autorization__form-label">Повторите пароль:</label>
+                            <input name="ConfirmPassword" type="password" class="autorization__form-input registration__form-passwordTwoInput">
+                        </div>
+                        <div class="registration__error"></div>
+                        <button type="submit" class="autorization__form-btn registrationBtn">Зарегистрировать</button>
+                    </form>
+                    <div class="autorization__form-subtitle">Есть аккаунт? <span class="autorization__form-subtitleBtn registration-subtitleBtn">Войдите!</span></div>
+                </div>
+                <div class="autorization__form autorization__form-login">
+                    <div class="autorization__form-title">C возвращением!</div>
+                    <form class="autorization__form-item">
+                        <div class="autorization__form-group">
+                            <label for="" class="autorization__form-label">Введите email<span>*</span></label>
+                            <input name="Email" type="text" class="autorization__form-input autorization__form-loginInput">
+                        </div>
+                        <div class="autorization__form-group">
+                            <label for="" class="autorization__form-label">Введите пароль<span>*</span></label>
+                            <input name="Password" type="password" class="autorization__form-input autorization__form-passwordInput">
+                        </div>
+                        <div class="autorization__error"></div>
+                        <div class="autorization__form-buttons">                            
+                            <button type="submit" class="autorization__form-btn autorizationBtn">Войти</button>
+                        </div>
+                    </form>
+                    <div class="autorization__form-subtitle">Нет аккаунта? <span class="autorization__form-subtitleBtn login-subtitleBtn">Регистрируйтесь!</span></div>
+                </div>
+            </div>
+            <div class="autorization__bottom">
+                <div class="autorization__bottom-title">
+                    Регистрируясь, вы принимаете условия <a href="#">Правил</a> и <a href="#">Соглашения</a>
+                    <br>об использовании сайта Ishi.ru
+                </div>
+                <div class="autorization__bottom-subtitle">
+                    &copy;2021 Ishi.ru
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        async function postServ(data, url) {
+            const response = fetch(url, {
+                method: "POST",
+                body: data
+            })
+            if ((await response).status == 200) document.location.href = "Home/index"
+        }
+        let loginBtn = document.querySelector(".registration-subtitleBtn");
+        let registrationBtn = document.querySelector(".login-subtitleBtn");
+        let politiks = document.querySelector(".autorization__bottom-title");
+        let registrationBlock = document.querySelector(".autorization__form-registration");
+        let loginBlock = document.querySelector(".autorization__form-login");
+        loginBtn.addEventListener("click", () =>{
+            loginBlock.style.display = "block";
+            loginBlock.style.opacity = "1";
+            registrationBlock.style.opacity = "0";
+            politiks.style.opacity = "0";
+            setTimeout(() => {
+                registrationBlock.style.display = "none";
+                // politiks.style.display = "none";
+            }, 300)
+        })
+        registrationBtn.addEventListener("click", () =>{
+            registrationBlock.style.display = "block";
+            // politiks.style.display = "block";
+            registrationBlock.style.opacity = "1";
+            politiks.style.opacity = "1";
+            loginBlock.style.opacity = "0";
+            setTimeout(() => {
+                loginBlock.style.display = "none";
+            }, 300)
+        })
+
+        let autorizationBtn = $(".autorizationBtn")
+        autorizationBtn.on("click", (event) => {
+            event.preventDefault()
+            let login = $(".autorization__form-loginInput").val()
+            let password = $(".autorization__form-passwordInput").val()
+            if(login != "" && password != ""){
+                $(".autorization__error").text("")
+                const data = new FormData();
+                data.append("Email", login);
+                data.append("Password", password);
+                postServ(data, "/Account/Login")
+            }
+            else{
+                $(".autorization__error").text("Необходимо заполнить все поля*")
+            }
+        })
+
+        let _registrationBtn = $(".registrationBtn")
+        _registrationBtn.on("click", (event) => {
+            event.preventDefault()
+            let login = $(".registration__form-loginInput").val()
+            let password = $(".registration__form-passwordInput").val()
+            let passwordTwo = $(".registration__form-passwordTwoInput").val()
+            if(login != "" && password != "" && passwordTwo != ""){
+                $(".registration__error").text("")
+                if(password == passwordTwo){
+                    const data = new FormData();
+                    data.append("Email", login);
+                    data.append("Password", password);
+                    postServ(data, "/Account/Register")
+                }
+                else{
+                    $(".registration__error").text("Пароли не совпадают*")
+                }
+            }
+            else{
+                $(".registration__error").text("Необходимо заполнить все поля*")
+            }
         })
     </script>
 </body>

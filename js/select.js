@@ -15,7 +15,7 @@ const selectFunc = (name) =>{
             text: _this.children('.active').text()
         }).insertAfter(_this);
     
-        const selectHead = _this.next('.new-select');
+        const selectHead = _this.next('.new-select ');
         $('<div>', {
             class: `new-select__list ${name}-new-select__list`
         }).insertAfter(selectHead);
@@ -23,7 +23,7 @@ const selectFunc = (name) =>{
         const selectList = selectHead.next('.new-select__list');
         for (let i = 0; i < selectOptionLength; i++) {
             $('<div>', {
-                class: `new-select__item ${(i == 0)? 'active': ''}`,
+                class: `new-select__item ${(i == 0)? 'active': ''} ${name}-item`,
                 html: $('<span>', {
                     text: selectOption.eq(i).text()
                 })
