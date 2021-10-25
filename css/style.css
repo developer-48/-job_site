@@ -872,20 +872,20 @@ a{
 
 
 /* resume-creation */
-/* .resume-creation__content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-} */
 
 .resume-creation{
     background: url(/img/background.png) no-repeat center;
-    background-size: cover;
+    background-size: 100%;
     background-attachment: fixed;
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 70px;
     color: #4C4955;
+    padding-bottom: 50px;
+}
+
+/* scrolbar */
+::-webkit-scrollbar {
+    width: 0;
 }
 
 .resume-creation input{
@@ -903,21 +903,26 @@ a{
 .resume-creation__header{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 92px;
+    margin-bottom: 70px;
 }
 
 .resume-creation__container{
     width: 800px;
     background-color: #fff;
+    border-radius: 12px;
+    padding: 0 90px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    transition: .5s all;
+    height: 0;
+}
+
+.resume-creation__container.active{
+    height: 570px;
     padding: 45px 90px;
     border: 2px solid #7405E2;
-    border-radius: 12px;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    display: none;    
+    opacity: 1;
 }
 
 .resume-creation__content-title{
@@ -1011,14 +1016,164 @@ input::-webkit-inner-spin-button {
     color: #7405E2;
 }
 
-.resume-creation__exit-btn{
+.resume-creation__back-btn{
     width: 28px;
     height: 28px;
     border-radius: 5px;
-    background: url(/img/resume-exit-icon.png);
+    background: url(/img/resume-back-icon.png);
     position: absolute;
-    right: 90px;
+    left: 90px;
     top: 45px;
     cursor: pointer;
     transition: .3s transform;
+}
+
+.resume-creation__back-btn:hover{
+    transform: scale(1.1);
+}
+
+.resume-creation__addition.active{
+    height: 655px;
+}
+
+.resume-creation__addition-one-line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-creation__one-line-left{
+    width: 350px;
+    margin-right: 60px;
+}
+
+.resume-creation__gender{
+    display: flex;
+    margin-bottom: 33px;    
+}
+
+.resume-creation__radio-input {
+    display: none; 
+}
+.resume-creation__radio-label {
+   display: flex;
+   align-items: center;
+   position: relative;
+   padding: 10px 50px 10px;  
+   transition: 0.3s;
+   width: 100%;
+   text-align: center;   
+   cursor: pointer;
+   border: 2px solid #D9D9D9;
+   width: 50%;
+   font-weight: 500;
+}
+
+.resume-creation__radio-label.left{
+    border-radius: 8px 0 0 8px;
+    border-right: 0;
+}
+
+.resume-creation__radio-label.right{
+    border-radius: 0 8px 8px 0;
+    border-left: 0;
+}
+
+.resume-creation__radio-input:checked + .resume-creation__radio-label{
+   background: #7305E2;
+   border-color: #7305E2;
+   color: #fff;
+}
+
+.resume-creation__radio-label:hover{
+    border-color: #7305E2;
+    border-width: 2px;
+}
+
+.resume-creation__photo-input{
+    display: none;
+}
+
+.resume-creation__one-line-right{
+    position: relative;
+    width: 200px;
+}
+
+.resume-creation__photo-label{
+    width: 166px;
+    height: 166px;
+    display: block;
+    border: 2px dashed #B6B6B6;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.resume-creation__delete-btn{
+    width: 24px;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+    transition: .3s transform;
+}
+
+.resume-creation__photo-delete-btn{
+    position: absolute;
+    bottom: 33px;
+    right: 0;
+}
+
+.resume-creation__delete-btn:hover{
+    transform: scale(1.2);
+}
+
+.resume-creation__checbox-container{
+    display: flex;
+    margin-bottom: 33px;
+}
+
+.resume-creation__checbox-item{
+    transition: .3s all;
+}
+
+.resume-creation__checbox-input {
+    display: none; 
+}
+.resume-creation__checbox-label {
+   display: flex;
+   align-items: center;
+   position: relative;   
+   transition: 0.3s;
+   min-height: 20px;
+   margin-left: 35px;
+   margin-right: 95px;
+   text-align: left;
+   cursor: pointer;
+}
+.resume-creation__checbox-label::before {
+   content: '';
+   position: absolute;
+   background: #fff;
+   width: 20px; 
+   height: 20px;
+   left: -35px;
+   transition: 0.3s;
+   border: 1px solid #26004D;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.resume-creation__checbox-input:checked + .resume-creation__checbox-label::before {
+   background: url(/img/checkmark.png) center #7f3ec0;
+   background-size: 100%;
+}
+
+.resume-creation__checbox-label:hover::before{
+   transform: scale(1.1);
+}
+
+.resume-creation__wishes.active{
+    height: 450px;
 }
