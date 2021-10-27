@@ -20,7 +20,7 @@
             </div>
             <div class="resume-creation__content">
                 <form action="" class="resume-form">
-                    <div class="resume-creation__container resume-creation__created active">
+                    <div class="resume-creation__container resume-creation__created">
                         <div class="resume-creation__content-title resume-creation__created-title">Создание резюме</div>
                         <div class="resume-creation__exit-btn"></div>
                         <div class="resume-creation__created-one-line">
@@ -37,6 +37,7 @@
                         <input type="text" class="resume-creation__input resume-creation__career-objective-input">
                         <label for="" class="resume-creation__label resume-creation__email-label">E-mail или мобильный телефон<span>*</span></label>
                         <input type="text" class="resume-creation__input resume-creation__email-input">
+                        <div class="resume-error resume-created-error"></div>
                         <div class="resume-creation__btn resume-creation__created-btn">Продолжить</div>
 
                         <div class="resume-creation__created-terms-use">Регистрируясь, вы принимаете условия <a href="#">Правил</a> и <a href="#">Соглашения</a> <br>об использовании сайта Ishi.ru</div>
@@ -56,18 +57,18 @@
                                    <label for="women" class="resume-creation__radio-label right resume-creation__gender-label">Женщина</label>
                                </div>
                                <label for="" class="resume-creation__label">Гражданство<span>*</span></label>
-                               <input type="text" class="resume-creation__input">                              
+                               <input type="text" class="resume-creation__input resume-creation__addition-citizenship-input">                              
                            </div>
-                           <div class="resume-creation__one-line-right">
+                           <div class="resume-creation__one-line-right resume-creation__addition-one-line-right">
                                <input id="resume-creation__photo" type="file" multiple accept="image/*,image/jpeg" class="resume-creation__photo-input"/>
-                               <label for="resume-creation__photo" class="resume-creation__photo-label"><img src="/img/added-photo-icon.png" alt=""></label>
+                               <label for="resume-creation__photo" class="resume-creation__photo-label"><img src="/img/added-photo-icon.png" alt=""><img src="" class="resume-creation__user-photo" alt=""></label>
                                <img src="/img/delete-icon.png" alt="" class="resume-creation__delete-btn resume-creation__photo-delete-btn"/>
                            </div>
                         </div>
-                        <label for="" class="resume-creation__label resume-creation__career-objective-label">Город проживания<span>*</span></label>
-                        <input type="text" class="resume-creation__input resume-creation__career-objective-input">
+                        <label for="" class="resume-creation__label resume-creation__city-residence-label">Город проживания<span>*</span></label>
+                        <input type="text" class="resume-creation__input resume-creation__city-residence-input">
                         <label for="" class="resume-creation__label resume-creation__phone-label">Мобильный телефон<span>*</span></label>
-                        <input type="number" class="resume-creation__input resume-creation__phone-input">
+                        <input type="text" class="resume-creation__input resume-creation__phone-input">
                         <div class="resume-creation__checbox-container">
                             <div class="resume-creation__checbox-item">
                                 <input type="checkbox" class="resume-creation__checbox-input" id="married">
@@ -78,6 +79,7 @@
                                 <label for="have-children" class="resume-creation__checbox-label">Есть дети</label>
                             </div>
                         </div>
+                        <div class="resume-error resume-addition-error"></div>
                         <div class="resume-creation__btn resume-creation__addition-btn">Продолжить</div>
                     </div>
 
@@ -99,45 +101,152 @@
                                 <label for="ready-move" class="resume-creation__checbox-label">Готов к переезду</label>
                             </div>
                         </div>
-                        <div class="resume-creation__btn resume-creation__addition-btn">Продолжить</div>
+                        <div class="resume-creation__btn-container">
+                            <div class="resume-creation__btn resume-creation__wishes-btn">Продолжить</div>
+                            <div class="resume-creation__btn resume-creation__wishes-skip-btn">Пропустить</div>
+                        </div>
+                    </div>
+
+                    <div class="resume-creation__container resume-creation__experience">
+                        <div class="resume-creation__back-btn resume-creation__experience-back"></div>
+                        <div class="resume-creation__content-title resume-creation__experience-title">Опыт работы</div>
+                        <div class="resume-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label resume-creation__company-label">Компания<span>*</span></label>
+                        <input type="text" class="resume-creation__input resume-creation__company-input">
+                        <label for="" class="resume-creation__label resume-creation__position-label">Должность<span>*</span></label>
+                        <input type="text" class="resume-creation__input resume-creation__position-input">
+                        <div class="resume-creation__work-period">
+                            <div class="resume-creation__work-beginning">
+                                <label for="" class="resume-creation__label">Начало работы<span>*</span></label>
+                                <div class="resume-creation__work-inputs-container">
+                                    <div tabindex="0" class="resume-creation__work-month-container resume-creation__work-beginning-month-container">
+                                        <input type="text" placeholder="Месяц" class="resume-creation__work-beginning-input resume-creation__work-beginning-month">
+                                        <img src="/img/clean-out-icon.png" alt="" class="resume-creation__work-input-clean beginning-month">
+                                    </div>
+                                    <div tabindex="0" class="resume-creation__work-year-container resume-creation__work-beginning-year-container">
+                                        <input type="text" placeholder="Год" class="resume-creation__work-beginning-input resume-creation__work-beginning-year">
+                                        <img src="/img/clean-out-icon.png" alt="" class="resume-creation__work-input-clean beginning-year">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resume-creation__work-period-line"></div>
+                            <div class="resume-creation__work-end">
+                                <label for="" class="resume-creation__label">Окончание работы</label>
+                                <div class="resume-creation__work-inputs-container">
+                                    <div tabindex="0" class="resume-creation__work-month-container resume-creation__work-end-month-container">
+                                        <input type="text" placeholder="Месяц" class="resume-creation__work-end-input resume-creation__work-end-month">
+                                        <img src="/img/clean-out-icon.png" alt="" class="resume-creation__work-input-clean end-month">
+                                    </div>
+                                    <div tabindex="0" class="resume-creation__work-year-container resume-creation__work-end-year-container">
+                                        <input type="text" placeholder="Год" class="resume-creation__work-end-input resume-creation__work-end-year">
+                                        <img src="/img/clean-out-icon.png" alt="" class="resume-creation__work-input-clean end-year">
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="resume-creation__checbox-input resume-creation__work-end-now-input" id="until-now">
+                                <label for="until-now" class="resume-creation__checbox-label work-end">По настоящее время</label>
+                            </div>
+                        </div>
+                        <label for="" class="resume-creation__label">Навыки и достижения<span>*</span></label>
+                        <textarea name="" id="" class="resume-creation__textarea resume-creation__work-responsibilities"></textarea>
+                        <div class="resume-creation__work-textarea-limit">
+                            <span class="resume-creation__work-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max">50</span>
+                        </div>
+                        <div class="resume-error resume-experience-error"></div>
+                        <div class="resume-creation__btn resume-creation__experience-btn">Продолжить</div>
+                    </div>
+
+                    <div class="resume-creation__container resume-creation__education">
+                        <div class="resume-creation__back-btn resume-creation__education-back"></div>
+                        <div class="resume-creation__content-title resume-creation__education-title">Образование</div>
+                        <div class="resume-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label resume-creation__level-education-label">Уровень образования<span>*</span></label>
+                        <input type="text" class="resume-creation__input resume-creation__level-education-input">
+                        <div class="resume-creation__created-one-line resume-creation__education-two-line">
+                            <div class="resume-creation__fulname resume-creation__educational-institution">
+                                <label for="" class="resume-creation__label resume-creation__educational-institution-label">Учебное заведение<span>*</span></label>
+                                <input type="text" class="resume-creation__input resume-creation__educational-institution-input">
+                            </div>
+                            <div class="resume-creation__year-birth resume-creation__year-issue">
+                                <label for="" class="resume-creation__label resume-creation__year-issue-label">Год выпуска<span>*</span></label>
+                                <input type="number" class="resume-creation__input resume-creation__year-issue-input">
+                            </div>
+                        </div>
+                        <label for="" class="resume-creation__label  resume-creation__speciality-label">Специальность<span>*</span></label>
+                        <input type="text" class="resume-creation__input resume-creation__speciality-input">
+                        <div class="resume-error resume-education-error"></div>
+                        <div class="resume-creation__btn resume-creation__education-btn">Продолжить</div>
+                    </div>
+
+                    <div class="resume-creation__container resume-creation__article active">
+                        <div class="resume-creation__back-btn resume-creation__article-back"></div>
+                        <div class="resume-creation__content-title resume-creation__article-title">Статьи</div>
+                        <div class="resume-creation__exit-btn"></div>
+                        <div class="resume-creation__scrol-block">
+                            <div class="resume-creation__scrol-item resume-creation__article-item" blockid = "1">
+                                <div class="resume-creation__scrol-content">
+                                    <label for="" class="resume-creation__label resume-creation__article-name-label">Название статьи</label>
+                                    <input type="text" class="resume-creation__input resume-creation__article-name-input">
+                                    <label for="" class="resume-creation__label  resume-creation__specification-article-label">Спецификация статьи</label>
+                                    <input type="text" class="resume-creation__input resume-creation__specification-article-input">
+                                    <div class="resume-creation__upload-article-container">
+                                        <div class="resume-creation__upload-article-line"></div>
+                                        <input type="file" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                                        id="upload-article" class="resume-creation__upload-article-input">
+                                        <label for="upload-article" class="resume-creation__upload-article-label">Загрузить файл</label>
+                                    </div>
+                                </div>
+                                <div class="resume-creation__scrol-right">
+                                    <div class="resume-creation__scrol-vertical-line article-top"></div>
+                                    <div blockid = "1" class="resume-creation__scrol-delite"></div>
+                                    <div class="resume-creation__scrol-vertical-line article-bottom"></div>
+                                </div>
+
+                            </div>
+                            <div class="resume-creation__scrol-item resume-creation__article-item" blockid = "2">
+                                <div class="resume-creation__scrol-content">
+                                    <label for="" class="resume-creation__label resume-creation__article-name-label">Название статьи</label>
+                                    <input type="text" class="resume-creation__input resume-creation__article-name-input">
+                                    <label for="" class="resume-creation__label  resume-creation__specification-article-label">Спецификация статьи</label>
+                                    <input type="text" class="resume-creation__input resume-creation__specification-article-input">
+                                    <div class="resume-creation__upload-article-container">
+                                        <div class="resume-creation__upload-article-line"></div>
+                                        <input type="file" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                                        id="upload-article" class="resume-creation__upload-article-input">
+                                        <label for="upload-article" class="resume-creation__upload-article-label">Загрузить файл</label>
+                                    </div>
+                                </div>
+                                <div class="resume-creation__scrol-right">
+                                    <div class="resume-creation__scrol-vertical-line article-top"></div>
+                                    <div blockid = "2" class="resume-creation__scrol-delite"></div>
+                                    <div class="resume-creation__scrol-vertical-line article-bottom"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="resume-error resume-article-error"></div>
+                        <div class="resume-creation__btn-container article">
+                            <div class="resume-creation__btn resume-creation__article-btn">Продолжить</div>
+                            <div class="resume-creation__add-article-btn"><img src="/img/add-icon.png" alt=""> Добавить новую статью</div>
+                        </div>
                     </div>
                 </form>
+            </div>
+            
+            <div class="resume-creation__popup">
+                <div class="resume-creation__popup-block">
+                    <div class="resume-creation__popup-block-top">
+                        Если вы покините страницу все данные будут утерены! <br>Вы все еще хотите покинуть страницу?
+                    </div>
+                    <div class="resume-creation__popup-block-bottom">
+                        <div class="resume-creation__popup-block-btn resume-creation__popup-block-home-btn">Продолжить</div>
+                        <div class="resume-creation__popup-block-btn resume-creation__popup-block-cancellation">Отмена</div>
+                    </div>
+                </div>
             </div>
         </div>
         
     </div>
     <script src="/js/jquery-3.6.0.min.js"></script>
-    <script>
-        $(".resume-creation__created-btn").on("click", () =>{
-            let one = $(".resume-creation__created");
-            let two = $(".resume-creation__addition");
-
-            one.removeClass("active")
-            two.addClass("active")
-        })
-        $(".resume-creation__addition-back").on("click", () =>{
-            let one = $(".resume-creation__created");
-            let two = $(".resume-creation__addition");
-
-            one.addClass("active")
-            two.removeClass("active")
-            
-        })
-        $(".resume-creation__addition-btn").on("click", () =>{
-            let one = $(".resume-creation__addition");
-            let two = $(".resume-creation__wishes");
-
-            one.removeClass("active")
-            two.addClass("active")
-        })
-        $(".resume-creation__wishes-back").on("click", () =>{
-            let one = $(".resume-creation__addition");
-            let two = $(".resume-creation__wishes");
-
-            one.addClass("active")
-            two.removeClass("active")
-            
-        })
-    </script>
+    <script src="/js/resume-creation-script.js"></script>
 </body>
 </html>

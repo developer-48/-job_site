@@ -1109,6 +1109,11 @@ input::-webkit-inner-spin-button {
     align-items: center;
     justify-content: center;
     margin-top: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.resume-creation__photo-label.active{
+    border: none;
 }
 
 .resume-creation__delete-btn{
@@ -1176,4 +1181,368 @@ input::-webkit-inner-spin-button {
 
 .resume-creation__wishes.active{
     height: 450px;
+}
+
+.resume-creation__btn-container{
+    display: flex;
+}
+
+.resume-creation__wishes-skip-btn{
+    border: 2px solid #D9D9D9;
+    background: none;
+    color: #4C4955;
+    margin-left: 40px;
+}
+
+.resume-creation__wishes-skip-btn:hover{
+    background-color: #D9D9D9;
+}
+
+.resume-creation__experience.active{
+    height: 710px;
+}
+
+.resume-creation__work-period{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-creation__work-inputs-container{
+    display: flex;    
+}
+
+.resume-creation__work-month-container, .resume-creation__work-year-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8px 10px 15px;    
+    border: 2px solid #D9D9D9;
+    border-radius: 8px;
+}
+
+.resume-creation__work-month-container:focus-within, .resume-creation__work-year-container:focus-within{
+    border: 2px solid #26004D;
+}
+
+.resume-creation__work-input-clean{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: .3s transform;
+}
+
+.resume-creation__work-input-clean:hover{
+    transform: scale(1.2);
+}
+
+.resume-creation__work-month-container{
+    margin-right: 15px;
+    width: 150px;
+}
+
+.resume-creation__work-year-container{
+    width: 100px;
+}
+
+.resume-creation__work-month-container input, .resume-creation__work-year-container input{
+    width: calc(100% - 12px);
+    font-size: 14px;
+    border: none;
+    outline: none;
+    height: 19px;
+}
+
+.resume-creation__work-month-container input::placeholder, .resume-creation__work-year-container input::placeholder{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #b6b5b5;
+}
+
+.resume-creation__work-period-line{
+    width: 30px;
+    height: 2px;
+    background-color: #D9D9D9;
+    margin-top: 45px;
+}
+
+.resume-creation__work-end{
+    width: 265px;
+}
+
+.resume-creation__checbox-label.work-end{
+    font-size: 14px;
+    margin-top: 11px;
+    width: 100%;
+}
+
+.resume-creation__checbox-label.work-end::before{
+    width: 16px;
+    height: 16px;
+}
+
+.resume-creation__textarea{
+    width: 100%;
+    display: block;
+    border: 2px solid #D9D9D9;
+    border-radius: 8px;
+    padding: 10px;
+    resize: none;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    outline-color: #26004D;
+    transition: .3s all;
+}
+
+.resume-creation__work-responsibilities{
+    height: 150px;
+    margin-bottom: 5px;
+    overflow-y: auto;    
+}
+
+.resume-creation__work-textarea-limit{
+    text-align: right;
+    font-size: 12px;
+    transition: .3s all;
+}
+
+.resume-creation__experience-btn{
+    margin-top: 20px;
+}
+
+.resume-creation__education.active{
+    height: 500px;
+}
+
+.resume-creation__education-btn{
+    outline: none;
+    border: none;
+}
+
+.resume-error{
+    color: #e72727;
+    font-size: 12px;
+    margin-top: -23px;
+    margin-bottom: 13px;
+    height: 15px;
+}
+
+.resume-creation__user-photo.active{
+    position: absolute;
+    display: block;
+    top: 0;
+    width: auto;
+    background-position: center;
+    height: 100%;
+    z-index: 2;
+    border-radius: 8px;
+    
+}
+
+.resume-experience-error{
+    margin-top: -10px;
+}
+
+.resume-creation__work-textarea-limit-amount.exceeding{
+    color: #F04949;
+    font-weight: 600;
+}
+
+.resume-creation__work-responsibilities.exceeding-limit{
+    border-color: #F04949;
+    outline: none;
+}
+
+.resume-creation__article.active{
+    height: 490px;
+}
+
+.resume-creation__upload-article-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-creation__upload-article-line{
+    width: 50%;
+    height: 2px;
+    background-color: #D9D9D9;
+    overflow: hidden;
+    transition: .3s all;
+}
+
+.resume-creation__upload-article-input{
+    display: none;
+}
+
+.resume-creation__upload-article-label{
+    padding: 14px 45px;
+    border: 2px solid #7305E2;
+    border-radius: 12px;
+    color: #7305E2;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s all;
+}
+.resume-creation__upload-article-label:hover{
+    color: #fff;
+    background-color: #7305E2;
+}
+
+.resume-creation__upload-article-line.document-downloaded{
+    height: auto;
+    background: none;
+    color: #7305E2;
+    text-align: right;    
+}
+
+.resume-creation__btn-container.article{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-creation__add-article-btn{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #7305E2;
+    cursor: pointer;
+    transition: .3s all;
+    height: 40px;
+}
+
+.resume-creation__add-article-btn:hover{
+    transform: scale(1.15);
+
+}
+
+.resume-creation__add-article-btn img{
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin-right: 12px;
+}
+
+.resume-creation__scrol-block{
+    width: 100%;
+    height: 75%;
+    overflow-y: auto;
+}
+
+.resume-creation__scrol-item{
+    border-bottom: 2px solid #D9D9D9;
+    margin-bottom: 40px;
+    padding-bottom: 33px;
+}
+
+.resume-creation__scrol-item{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 33px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-creation__scrol-content{
+    width: 570px;
+}
+
+.resume-creation__scrol-right{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: column;
+    width: 28px;
+}
+
+.resume-creation__scrol-vertical-line{
+    width: 2px;
+    background-color: #D9D9D9;
+}
+
+.resume-creation__scrol-vertical-line.article-top{
+    height: 30%;
+}
+
+.resume-creation__scrol-vertical-line.article-bottom{
+    height: 50%;
+}
+
+.resume-creation__scrol-delite{
+    width: 24px;
+    height: 24px;
+    background: url(/img/delete-icon.png);
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.resume-creation__scrol-delite:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+.resume-creation__popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2f2e3344;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: .5s all;
+    opacity: 0;
+}
+
+.resume-creation__popup-block{
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 50px;
+    max-width: 700px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2c0257;
+    text-align: center;
+}
+
+.resume-creation__popup-block-top{
+    line-height: 30px;
+}
+
+.resume-creation__popup-block-bottom{
+    display: flex;
+    justify-content: space-between;
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;    
+}
+
+.resume-creation__popup-block-btn{
+    padding: 10px 20px;
+    background: #6B24B2;
+    border-radius: 8px;
+    color: #fff;
+    width: 47%;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.resume-creation__popup-block-btn:hover{
+    background-color: #380e63;
+    transform: scale(1.1);
+}
+
+.resume-creation__popup-block-home-btn{
+    background-color: #383344;
+}
+
+.resume-creation__popup-block-home-btn:hover{
+    background-color: #25222c;
 }
