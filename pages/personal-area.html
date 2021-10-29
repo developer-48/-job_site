@@ -30,54 +30,55 @@
                                 <div class="personal-area__user-image">
                                     <input id="personal-area__user-image" type="file" multiple accept="image/*,image/jpeg" class="personal-area__user-photo-edit-input"/>
                                     <div class="personal-area__user-image-container">
-                                        <img src="/img/user-image.png" class="resume-creation__user-photo" alt="">
+                                        <img src="/img/user-image.png" class="personal-area__user-photo" alt="">
                                     </div>
                                     <label for="personal-area__user-image" class="personal-area__user-photo-edit-label"><div class="personal-area__user-photo-edit" alt=""></div></label>
                                 </div>
                                 <div class="personal-area__user-progres">
                                     <div class="personal-area__user-progres-title-container">
                                         <div class="personal-area__user-progres-title">Оформлено</div>
-                                        <div class="personal-area__user-progres-value"><span class="personal-area__user-progres-value-span">33</span>%</div>
+                                        <div class="personal-area__user-progres-value"><span class="personal-area__user-progres-value-span">60</span>%</div>
                                     </div>
                                     <div class="personal-area__progress-bar">
                                         <div class="personal-area__progress-bar-line">
                                         </div>
                                     </div>
+                                    <div class="personal-area__delete-account">Удалить аккаунт</div>
                                 </div>
                             </div>
                             <div class="personal-area__personal-data-container">
-                                <div class="personal-area__content-title resume-creation__created-title">Личные данные</div>
+                                <div class="personal-area__content-title">Личные данные</div>
                                 <div class="resume-creation__created-one-line">
                                     <div class="resume-creation__fulname">
-                                        <label for="" class="resume-creation__label resume-creation__fulname-label">Имя и Фамилия<span>*</span></label>
-                                        <input type="text" class="resume-creation__input resume-creation__fulname-input">
+                                        <label for="" class="resume-creation__label">Имя и Фамилия<span>*</span></label>
+                                        <input type="text" class="resume-creation__input personal-area__fulname-input">
                                     </div>
                                     <div class="resume-creation__year-birth">
-                                        <label for="" class="resume-creation__label resume-creation__year-birth-label">Год рождения<span>*</span></label>
-                                        <input type="number" class="resume-creation__input resume-creation__year-birth-input">
+                                        <label for="" class="resume-creation__label ">Год рождения<span>*</span></label>
+                                        <input type="number" class="resume-creation__input personal-area__year-birth-input">
                                     </div>
                                 </div>
-                                <label for="" class="resume-creation__label resume-creation__career-objective-label">Желаемая должность<span>*</span></label>
-                                <input type="text" class="resume-creation__input resume-creation__career-objective-input">
+                                <label for="" class="resume-creation__label ">Желаемая должность<span>*</span></label>
+                                <input type="text" class="resume-creation__input personal-area__career-objective-input">
                                 <label for="" class="resume-creation__label personal-area__email-label">E-mail<span>*</span></label>
                                 <input type="text" class="resume-creation__input personal-area__email-input">
     
                                 <div class="personal-area__addition-one-line">
                                         <label for="" class="resume-creation__label">Пол<span>*</span></label>
                                         <div class="resume-creation__gender">
-                                            <input name="gender" value="Мужчина" type="radio" checked id="men" class="resume-creation__radio-input resume-creation__gender-input">
+                                            <input name="gender" value="Мужчина" type="radio" checked id="men" class="resume-creation__radio-input personal-area__gender-input">
                                             <label for="men" class="resume-creation__radio-label resume-creation__gender-label left">Мужчина</label>
-                                            <input name="gender" value="Женщина" type="radio" id="women" class="resume-creation__radio-input resume-creation__gender-input">
+                                            <input name="gender" value="Женщина" type="radio" id="women" class="resume-creation__radio-input personal-area__gender-input">
                                             <label for="women" class="resume-creation__radio-label right resume-creation__gender-label">Женщина</label>
                                         </div>
                                         <label for="" class="resume-creation__label">Гражданство<span>*</span></label>
-                                        <input type="text" class="resume-creation__input resume-creation__addition-citizenship-input">                              
+                                        <input type="text" class="resume-creation__input personal-area__citizenship-input">                              
                                     
                                 </div>
                                 <label for="" class="resume-creation__label resume-creation__city-residence-label">Город проживания<span>*</span></label>
-                                <input type="text" class="resume-creation__input resume-creation__city-residence-input">
+                                <input type="text" class="resume-creation__input personal-area__city-residence-input">
                                 <label for="" class="resume-creation__label resume-creation__phone-label">Мобильный телефон<span>*</span></label>
-                                <input type="text" class="resume-creation__input resume-creation__phone-input">
+                                <input type="text" class="resume-creation__input personal-area__phone-input">
                                 <div class="resume-creation__checbox-container">
                                     <div class="resume-creation__checbox-item">
                                         <input type="checkbox" class="resume-creation__checbox-input" id="married">
@@ -92,11 +93,11 @@
                             </div>
                         </div>
                         <div class="personal-area__content-container">
-                            <div class="personal-area__content-title personal-area__wishes-title one-title-mt">Пожелания к работе</div>
-                            <label for="" class="resume-creation__label resume-creation__salary-label">Зарплата от, руб.</label>
-                            <input type="text" class="resume-creation__input resume-creation__salary-input">
-                            <label for="" class="resume-creation__label resume-creation__schedule-label">Предпочитаемый график</label>
-                            <input type="text" class="resume-creation__input resume-creation__schedule-input">
+                            <div class="personal-area__content-title one-title-mt">Пожелания к работе</div>
+                            <label for="" class="resume-creation__label personal-area__salary-label">Зарплата от, руб.</label>
+                            <input type="text" class="resume-creation__input personal-area__salary-input">
+                            <label for="" class="resume-creation__label personal-area__schedule-label">Предпочитаемый график</label>
+                            <input type="text" class="resume-creation__input personal-area__schedule-input">
                             <div class="resume-creation__checbox-container">
                                 <div class="resume-creation__checbox-item">
                                     <input type="checkbox" class="resume-creation__checbox-input" id="business-trips">
@@ -109,21 +110,21 @@
                             </div>
 
                             <div class="personal-area__content-title resume-creation__experience-title title-mt">Опыт работы</div>
-                            <label for="" class="resume-creation__label resume-creation__company-label">Компания<span>*</span></label>
-                            <input type="text" class="resume-creation__input resume-creation__company-input">
-                            <label for="" class="resume-creation__label resume-creation__position-label">Должность<span>*</span></label>
-                            <input type="text" class="resume-creation__input resume-creation__position-input">
+                            <label for="" class="resume-creation__label personal-area__company-label">Компания<span>*</span></label>
+                            <input type="text" class="resume-creation__input personal-area__company-input">
+                            <label for="" class="resume-creation__label personal-area__position-label">Должность<span>*</span></label>
+                            <input type="text" class="resume-creation__input personal-area__position-input">
                             <div class="resume-creation__work-period">
                                 <div class="resume-creation__work-beginning">
                                     <label for="" class="resume-creation__label">Начало работы<span>*</span></label>
                                     <div class="resume-creation__work-inputs-container">
                                         <div tabindex="0" class="resume-creation__work-month-container resume-creation__work-beginning-month-container">
-                                            <input type="text" placeholder="Месяц" class="resume-creation__work-beginning-input resume-creation__work-beginning-month">
-                                            <img src="/img/clean-out-icon.png" alt="" class="resume-creation__work-input-clean beginning-month">
+                                            <input type="text" placeholder="Месяц" class="resume-creation__work-beginning-input personal-area__work-beginning-month">
+                                            <img src="/img/clean-out-icon.png" alt="" class="personal-area__work-input-clean beginning-month">
                                         </div>
                                         <div tabindex="0" class="resume-creation__work-year-container resume-creation__work-beginning-year-container">
-                                            <input type="text" placeholder="Год" class="resume-creation__work-beginning-input resume-creation__work-beginning-year">
-                                            <img src="/img/clean-out-icon.png" alt="" class="resume-creation__work-input-clean beginning-year">
+                                            <input type="text" placeholder="Год" class="resume-creation__work-beginning-input personal-area__work-beginning-year">
+                                            <img src="/img/clean-out-icon.png" alt="" class="personal-area__work-input-clean beginning-year">
                                         </div>
                                     </div>
                                 </div>
@@ -131,74 +132,73 @@
                                 <div class="resume-creation__work-end">
                                     <label for="" class="resume-creation__label">Окончание работы</label>
                                     <div class="resume-creation__work-inputs-container">
-                                        <div tabindex="0" class="resume-creation__work-month-container resume-creation__work-end-month-container">
-                                            <input type="text" placeholder="Месяц" class="resume-creation__work-end-input resume-creation__work-end-month">
-                                            <img src="/img/clean-out-icon.png" alt="" class="resume-creation__work-input-clean end-month">
+                                        <div tabindex="0" class="resume-creation__work-month-container personal-area__work-end-month-container">
+                                            <input type="text" placeholder="Месяц" class="resume-creation__work-end-input personal-area__work-end-month">
+                                            <img src="/img/clean-out-icon.png" alt="" class="personal-area__work-input-clean end-month">
                                         </div>
-                                        <div tabindex="0" class="resume-creation__work-year-container resume-creation__work-end-year-container">
-                                            <input type="text" placeholder="Год" class="resume-creation__work-end-input resume-creation__work-end-year">
-                                            <img src="/img/clean-out-icon.png" alt="" class="resume-creation__work-input-clean end-year">
+                                        <div tabindex="0" class="resume-creation__work-year-container personal-area__work-end-year-container">
+                                            <input type="text" placeholder="Год" class="resume-creation__work-end-input personal-area__work-end-year">
+                                            <img src="/img/clean-out-icon.png" alt="" class="personal-area__work-input-clean end-year">
                                         </div>
                                     </div>
-                                    <input type="checkbox" class="resume-creation__checbox-input resume-creation__work-end-now-input" id="until-now">
+                                    <input type="checkbox" class="resume-creation__checbox-input personal-area__work-end-now-input" id="until-now">
                                     <label for="until-now" class="resume-creation__checbox-label work-end">По настоящее время</label>
                                 </div>
                             </div>
                             <label for="" class="resume-creation__label">Навыки и достижения<span>*</span></label>
-                            <textarea name="" id="" class="resume-creation__textarea resume-creation__work-responsibilities"></textarea>
+                            <textarea name="" id="" class="resume-creation__textarea personal-area__work-responsibilities"></textarea>
                             <div class="resume-creation__work-textarea-limit">
-                                <span class="resume-creation__work-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max">50</span>
+                                <span class="personal-area__work-textarea-limit-amount">0</span>/<span class="personal-area__work-textarea-limit-max">50</span>
                             </div>
-                            <div class="resume-error resume-experience-error"></div>
+                            <div class="resume-error personal-area-experience-error"></div>
 
 
-                            <div class="personal-area__content-title resume-creation__education-title title-mt">Образование</div>
-                            <label for="" class="resume-creation__label resume-creation__level-education-label">Уровень образования<span>*</span></label>
-                            <input type="text" class="resume-creation__input resume-creation__level-education-input">
-                            <div class="resume-creation__created-one-line resume-creation__education-two-line">
-                                <div class="resume-creation__fulname resume-creation__educational-institution">
-                                    <label for="" class="resume-creation__label resume-creation__educational-institution-label">Учебное заведение<span>*</span></label>
-                                    <input type="text" class="resume-creation__input resume-creation__educational-institution-input">
+                            <div class="personal-area__content-title personal-area__education-title title-mt">Образование</div>
+                            <label for="" class="resume-creation__label personal-area__level-education-label">Уровень образования<span>*</span></label>
+                            <input type="text" class="resume-creation__input personal-area__level-education-input">
+                            <div class="resume-creation__created-one-line personal-area__education-two-line">
+                                <div class="resume-creation__fulname personal-area__educational-institution">
+                                    <label for="" class="resume-creation__label personal-area__educational-institution-label">Учебное заведение<span>*</span></label>
+                                    <input type="text" class="resume-creation__input personal-area__educational-institution-input">
                                 </div>
-                                <div class="resume-creation__year-birth resume-creation__year-issue">
-                                    <label for="" class="resume-creation__label resume-creation__year-issue-label">Год выпуска<span>*</span></label>
-                                    <input type="number" class="resume-creation__input resume-creation__year-issue-input">
+                                <div class="resume-creation__year-birth personal-area__year-issue">
+                                    <label for="" class="resume-creation__label rpersonal-area__year-issue-label">Год выпуска<span>*</span></label>
+                                    <input type="number" class="resume-creation__input personal-area__year-issue-input">
                                 </div>
                             </div>
-                            <label for="" class="resume-creation__label  resume-creation__speciality-label">Специальность<span>*</span></label>
-                            <input type="text" class="resume-creation__input resume-creation__speciality-input">
-                            <div class="resume-error resume-education-error"></div>
+                            <label for="" class="resume-creation__label  personal-area__speciality-label">Специальность<span>*</span></label>
+                            <input type="text" class="resume-creation__input personal-area__speciality-input">
+                            <div class="resume-error personal-area-education-error"></div>
 
 
-                            <div class="personal-area__content-title resume-creation__article-title title-mt">Статьи</div>
-                            <div class="resume-creation__scrol-block">
-                                <div class="resume-creation__scrol-item resume-creation__article-item" blockid = "1">
+                            <div class="personal-area__content-title personal-area__article-title title-mt">Статьи</div>
+                            <div class="personal-area__scrol-block">
+                                <div class="personal-area__scrol-item personal-area__article-item" blockid = "1">
                                     <div class="resume-creation__scrol-content">
-                                        <label for="" class="resume-creation__label resume-creation__article-name-label">Название статьи</label>
-                                        <input type="text" class="resume-creation__input resume-creation__article-name-input">
-                                        <label for="" class="resume-creation__label  resume-creation__specification-article-label">Спецификация статьи</label>
-                                        <input type="text" class="resume-creation__input resume-creation__specification-article-input">
+                                        <label for="" class="resume-creation__label personal-area__article-name-label">Название статьи</label>
+                                        <input type="text" class="resume-creation__input personal-area__article-name-input">
+                                        <label for="" class="resume-creation__label  personal-area__specification-article-label">Спецификация статьи</label>
+                                        <input type="text" class="resume-creation__input personal-area__specification-article-input">
                                         <div class="resume-creation__upload-article-container">
-                                            <div class="resume-creation__upload-article-line"></div>
+                                            <div class="personal-area__upload-article-line"></div>
                                             <input type="file" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                                            id="upload-article1" class="resume-creation__upload-article-input">
-                                            <label for="upload-article1" class="resume-creation__upload-article-label">Загрузить файл</label>
+                                            id="upload-article1" class="personal-area__upload-article-input">
+                                            <label for="upload-article1" class="personal-area__upload-article-label">Загрузить файл</label>
                                         </div>
                                     </div>
                                     <div class="resume-creation__scrol-right">
                                         <div class="resume-creation__scrol-vertical-line article-top"></div>
-                                        <div blockid = "1" class="resume-creation__scrol-delite"></div>
+                                        <div blockid = "1" class="personal-area__scrol-delite"></div>
                                         <div class="resume-creation__scrol-vertical-line article-bottom"></div>
                                     </div>
-
                                 </div>
+
                             </div>
-                            <div class="resume-error resume-article-error"></div>
+                            <div class="resume-error personal-area__article-error"></div>
                             <div class="personal-area__btn article">
-                                <div class="resume-creation__add-article-btn"><img src="/img/add-icon.png" alt=""> Добавить новую статью</div>
+                                <div class="personal-area__add-article-btn"><img src="/img/add-icon.png" alt=""> Добавить новую статью</div>
                             </div>
                             <div class="personal-area__btn-container">
-                                <div class="personal-area__btn-container-item personal-area__btn-clean">Очистить всё</div>
                                 <div class="personal-area__btn-container-item personal-area__btn-save">Сохранить</div>
                             </div>
                         </div>                       
@@ -206,15 +206,26 @@
                 </div>
             </div>
             
-            <div class="resume-creation__popup">
-                <div class="resume-creation__popup-block">
-                    <div class="resume-creation__popup-block-top">
+            <div class="personal-area__popup">
+                <div class="personal-area__popup-block exit-home">
+                    <div class="personal-area__popup-block-top">
                         Если вы покините страницу все данные будут утерены! <br>Вы все еще хотите покинуть страницу?
                     </div>
-                    <div class="resume-creation__popup-block-bottom">
-                        <div class="resume-creation__popup-block-btn resume-creation__popup-block-home-btn">Продолжить</div>
-                        <div class="resume-creation__popup-block-btn resume-creation__popup-block-cancellation">Отмена</div>
+                    <div class="personal-area__popup-block-bottom">
+                        <div class="resume-creation__popup-block-btn personal-area__popup-block-home-btn">Продолжить</div>
+                        <div class="resume-creation__popup-block-btn personal-area__popup-block-cancellation">Отмена</div>
                     </div>
+                </div>
+                <div class="personal-area__popup-block delete-account">
+                    <div class="personal-area__popup-block-top">
+                        Если вы удалите аккаунт, вседанные будут потерены! <br>Вы действительно хотите удалить аккаунт?
+                    </div>
+                    <form action="">
+                        <div class="personal-area__popup-block-bottom">
+                            <button type="submit" class="personal-area__popup-block-btn personal-area__popup-block-delete-btn">Да</button>
+                            <div class="personal-area__popup-block-btn personal-area__popup-block-cancellation">Нет</div>
+                        </div>
+                    </form>
                 </div>
             </div>
         

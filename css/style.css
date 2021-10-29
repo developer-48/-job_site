@@ -1432,7 +1432,6 @@ input::-webkit-inner-spin-button {
     width: 100%;
     height: 75%;
     overflow-y: auto;
-
 }
 
 .resume-creation__scrol-item.active{
@@ -1717,15 +1716,15 @@ input::-webkit-inner-spin-button {
 
 .personal-area__btn-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     width: auto;
-    margin-top: 90px;
+    margin-top: 60px;
 }
 
 .personal-area__btn-container-item{
     width: 47%;
     padding: 10px 0;
-    border: 2px solid #7A12E2;
+    border: 2px solid #646464;
     border-radius: 8px;
     font-size: 18px;
     text-align: center;
@@ -1733,10 +1732,6 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
     font-weight: 700;
     
-}
-
-.personal-area__btn-container-item:hover{
-    transform: scale(1.1, 1.1);
 }
 
 .personal-area__btn-clean{
@@ -1748,13 +1743,241 @@ input::-webkit-inner-spin-button {
     color: #380e63;
 }
 
+/* .personal-area__btn-save{
+    background-color: #D9D9D9;
+    color: #646464;
+} */
+
 .personal-area__btn-save{
-    background-color: #7A12E2;
+    background-color: #383543;
+    border-color: #383543;
     color: #fff;
 }
 
-.personal-area__btn-save:hover{
+.personal-area__btn-save.active{
+    background-color: #7A12E2;
+    border-color: #7A12E2;
+    color: #fff;
+}
+
+.personal-area__btn-save.active:hover{
     background-color: #380e63;
     border-color: #380e63;
 }
 
+.personal-area__upload-article-input{
+    display: none;
+}
+
+.personal-area__upload-article-label{
+    padding: 14px 45px;
+    border: 2px solid #7305E2;
+    border-radius: 12px;
+    color: #7305E2;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s all;
+}
+.personal-area__upload-article-label:hover{
+    color: #fff;
+    background-color: #7305E2;
+}
+
+.personal-area__add-article-btn{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #7305E2;
+    cursor: pointer;
+    transition: .3s all;
+    height: 40px;
+}
+
+.personal-area__add-article-btn:hover{
+    transform: scale(1.15);
+
+}
+
+.personal-area__add-article-btn img{
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin-right: 12px;
+}
+
+.personal-area__user-photo{
+    display: block;
+    width: auto;
+    background-position: center;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.personal-area__work-responsibilities{
+    height: 150px;
+    margin-bottom: 5px;
+    overflow-y: auto;    
+}
+
+.personal-area__work-textarea-limit-amount.exceeding{
+    color: #F04949;
+    font-weight: 600;
+}
+
+.personal-area__work-responsibilities.exceeding-limit{
+    border-color: #F04949;
+    outline: none;
+}
+
+.personal-area__work-input-clean{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: .3s transform;
+}
+
+.personal-area__work-input-clean:hover{
+    transform: scale(1.2);
+}
+
+.personal-area__scrol-delite{
+    width: 24px;
+    height: 24px;
+    background: url(/img/delete-icon.png);
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.personal-area__scrol-delite:hover{
+    transform: scale(1.1);
+}
+
+.personal-area__scrol-block{
+    width: 100%;
+    overflow-y: auto;
+}
+
+.personal-area__scrol-item.active{
+    border-bottom: 2px solid #D9D9D9;
+    margin-bottom: 40px;
+    padding-bottom: 33px;
+}
+
+.personal-area__scrol-item{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 33px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal-area__upload-article-line{
+    width: 50%;
+    height: 2px;
+    background-color: #D9D9D9;
+    overflow: hidden;
+    transition: .3s all;
+}
+.personal-area__upload-article-line.document-downloaded{
+    height: auto;
+    background: none;
+    color: #7305E2;
+    text-align: right;   
+}
+
+.personal-area__delete-account{
+    margin-top: 50px;
+    color: #fff;
+    background-color: #7305E2;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 10px;
+    text-align: center;
+    transition: .3s all;
+}
+
+.personal-area__delete-account:hover{
+    background-color: #380e63;
+    border-radius: 10px 0 10px 0;
+}
+
+
+.personal-area__popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2f2e3344;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: .5s all;
+    opacity: 0;
+}
+
+.personal-area__popup-block{
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 50px;
+    max-width: 700px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2c0257;
+    text-align: center;
+    display: none;
+}
+
+.personal-area__popup-block-top{
+    line-height: 30px;
+}
+
+.personal-area__popup-block-bottom{
+    display: flex;
+    justify-content: space-between;
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;    
+}
+
+.personal-area__popup-block-btn{
+    padding: 10px 20px;
+    background: #6B24B2;
+    border-radius: 8px;
+    color: #fff;
+    width: 47%;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.personal-area__popup-block-btn:hover{
+    background-color: #380e63;
+    transform: scale(1.1);
+}
+
+.personal-area__popup-block-home-btn, .personal-area__popup-block-delete-btn{
+    background-color: #383344;
+}
+
+.personal-area__popup-block-home-btn:hover, .personal-area__popup-block-delete-btn:hover{
+    background-color: #25222c;
+}
+
+.personal-area__logo-btn{
+    cursor: pointer;
+
+}
+
+.personal-area__popup-block-delete-btn{
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+}
