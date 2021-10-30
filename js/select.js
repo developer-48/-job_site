@@ -11,7 +11,7 @@ const selectFunc = (name) =>{
         _this.hide();
         _this.wrap('<div class="select"></div>');
         $('<div>', {
-            class: 'new-select',
+            class: `new-select ${name}`,
             text: _this.children('.active').text()
         }).insertAfter(_this);
     
@@ -63,3 +63,4 @@ const selectFunc = (name) =>{
 
 selectFunc("typeEmployment__watch-select")
 selectFunc("typeEmployment__remoteWork-select")
+selectFunc("vacancies-creation__vacancy-education-select")

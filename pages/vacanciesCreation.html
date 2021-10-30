@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание резюме</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="resume-creation">
+        <div class="wrap">
+            <div class="resume-creation__header">
+                
+                <div class="resume-creation__logo-btn">
+                    <img src="/img/logo.png" alt="" class="resume-creation__header-logo"/>
+                </div>
+                <a href="#">
+                    <img src="/img/notreen-logo.png" alt="" class="resume-creation__header-notreen-logo">
+                </a>
+            </div>
+            <div class="resume-creation__content">
+                <form class = "resume-form">
+                    <div class="resume-creation__container vacancies-creation__container vacancies-creation__place active">
+                        <div class="resume-creation__content-title vacancies-creation__place-title">Разместить вакансию</div>
+                        <div class="resume-creation__exit-btn vacancies-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label vacancies-creation__vacancy-title-label">Заголовок<span>*</span></label>
+                        <input type="text" class="resume-creation__input vacancies-creation__vacancy-title-input" >
+                        <label for="" class="resume-creation__label vacancies-creation__salary-label">Заработная плата<span>*</span></label>
+                        <input type="text" class="resume-creation__input vacancies-creation__salary-input">
+                        <div class="resume-error vacancies-place-error"></div>
+                        <div class="resume-creation__btn vacancies-creation__place-btn">Продолжить</div>
+
+                        <div class="resume-creation__created-terms-use">Размищая вакансию, вы принимаете условия <a href="#">Правил</a> и <a href="#">Соглашения</a> <br>об использовании сайта Ishi.ru</div>
+                    </div>
+
+                    <div class="resume-creation__container vacancies-creation__container vacancies-creation__description">
+                        <div class="resume-creation__back-btn vacancies-creation__description-back"></div>
+                        <div class="resume-creation__content-title vacancies-creation__description-title">Вакансия</div>
+                        <div class="resume-creation__exit-btn vacancies-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label vacancies-creation__description-label">Описание<span>*</span></label>
+                        <textarea name="" id="" class="resume-creation__textarea vacancies-creation__textarea vacancies-creation__description-textarea"></textarea>
+                        <div class="resume-creation__work-textarea-limit vacancies-creation__description-textarea-limit">
+                            <span class="resume-creation__work-textarea-limit-amount vacancies-creation__description-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max vacancies-creation__description-textarea-limit-max">50</span>
+                        </div>
+                        <div class="resume-error vacancies__description-error"></div>
+                        <div class="resume-creation__btn vacancies-creation__description-btn">Продолжить</div>
+                    </div>
+
+                    <div class="resume-creation__container vacancies-creation__container vacancies-creation__requirements">
+                        <div class="resume-creation__back-btn vacancies-creation__requirements-back"></div>
+                        <div class="resume-creation__content-title vacancies-creation__requirements-title">Требования</div>
+                        <div class="resume-creation__exit-btn vacancies-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label vacancies-creation__vacancy-work-experience-label">Опыт работы<span>*</span></label>
+                        <input type="text" class="resume-creation__input vacancies-creation__vacancy-work-experience-input" >
+                        <label for="" class="resume-creation__label vacancies-creation__vacancy-education-label">Образование<span>*</span></label>
+                        <select class="select vacancies-creation__vacancy-education-select">
+                            <option class="vacancies-creation__vacancy-education-item active" value="Среднее профессиональное образование">Среднее профессиональное образование</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Высшее образование - бакалавриат">Высшее образование - бакалавриат</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Высшее образование - специалитет, магистратура">Высшее образование - специалитет, магистратура</option>
+                        </select>
+                        <label for="" class="resume-creation__label vacancies-creation__skills-label">Навыки<span>*</span></label>
+                        <textarea name="" id="" placeholder="Пишите навыки через запятую" class="resume-creation__textarea vacancies-creation__textarea vacancies-creation__skills-textarea"></textarea>
+                        <div class="resume-creation__work-textarea-limit vacancies-creation__skills-textarea-limit">
+                            <span class="resume-creation__work-textarea-limit-amount vacancies-creation__skills-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max vacancies-creation__skills-textarea-limit-max">50</span>
+                        </div>
+                        <div class="resume-error vacancies__requirements-error vacancies__skills-error"></div>
+                        <div class="resume-creation__btn vacancies-creation__requirements-btn">Продолжить</div>
+                    </div>
+
+                    <div class="resume-creation__container vacancies-creation__container vacancies-creation__responsibilities">
+                        <div class="resume-creation__back-btn vacancies-creation__responsibilities-back"></div>
+                        <div class="resume-creation__content-title vacancies-creation__responsibilities-title">Нагрузка</div>
+                        <div class="resume-creation__exit-btn vacancies-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label vacancies-creation__responsibilities-label">Обязанности<span>*</span></label>
+                        <textarea name="" id="" placeholder="Пишите обязанности через запятую" class="resume-creation__textarea vacancies-creation__textarea vacancies-creation__responsibilities-textarea"></textarea>
+                        <div class="resume-creation__work-textarea-limit vacancies-creation__responsibilities-textarea-limit">
+                            <span class="resume-creation__work-textarea-limit-amount vacancies-creation__responsibilities-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max vacancies-creation__responsibilities-textarea-limit-max">50</span>
+                        </div>
+                        <div class="resume-error vacancies__responsibilities-error"></div>
+                        <div class="resume-creation__btn vacancies-creation__responsibilities-btn">Продолжить</div>
+                    </div>
+
+                    <div class="resume-creation__container vacancies-creation__container vacancies-creation__conditions">
+                        <div class="resume-creation__back-btn vacancies-creation__conditions-back"></div>
+                        <div class="resume-creation__content-title vacancies-creation__conditions-title">Условия</div>
+                        <div class="resume-creation__exit-btn vacancies-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label vacancies-creation__conditions-label">Условия<span>*</span></label>
+                        <textarea name="" id="" placeholder="Пишите условия через запятую" class="resume-creation__textarea vacancies-creation__textarea vacancies-creation__conditions-textarea"></textarea>
+                        <div class="resume-creation__work-textarea-limit vacancies-creation__conditions-textarea-limit">
+                            <span class="resume-creation__work-textarea-limit-amount vacancies-creation__conditions-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max vacancies-creation__conditions-textarea-limit-max">50</span>
+                        </div>
+                        <div class="resume-error vacancies__conditions-error"></div>
+                        <div class="resume-creation__btn vacancies-creation__conditions-btn">Продолжить</div>
+                    </div>
+
+                </form>
+            </div>
+            
+            <div class="resume-creation__popup">
+                <div class="resume-creation__popup-block">
+                    <div class="resume-creation__popup-block-top">
+                        Если вы покините страницу все данные будут утерены! <br>Вы все еще хотите покинуть страницу?
+                    </div>
+                    <div class="resume-creation__popup-block-bottom">
+                        <div class="resume-creation__popup-block-btn resume-creation__popup-block-home-btn">Продолжить</div>
+                        <div class="resume-creation__popup-block-btn resume-creation__popup-block-cancellation">Отмена</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/vacancies-creation-script.js"></script>
+    <script src="/js/select.js"></script>
+</body>
+</html>

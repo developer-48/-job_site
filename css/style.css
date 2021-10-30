@@ -1981,3 +1981,63 @@ input::-webkit-inner-spin-button {
     font-size: 18px;
     font-weight: 700;
 }
+
+
+/* vacancies-creation */
+.vacancies-creation__container.active{
+    height: 450px;
+
+}
+
+.vacancies-creation__place.active{
+    height: 465px;
+}
+
+.vacancies-creation__vacancy-education-select{    
+    border: 2px solid #D9D9D9;    
+    border-radius: 8px;
+    padding: 12px 10px;
+    margin-bottom: 33px;
+    color: #26004D;
+    transition: .3s all;
+}
+
+.vacancies-creation__description-textarea{
+    height: 192px;
+}
+
+.vacancies-creation__requirements.active{
+    height: 615px;
+}
+
+.vacancies-creation__vacancy-education-select.on{
+    border-color: #380e63;
+}
+
+.vacancies-creation__vacancy-education-select-new-select__list{
+    border: 2px solid #380e63;
+    border-radius: 8px;
+}
+
+.vacancies-creation__skills-textarea{
+    height: 150px;
+    margin-bottom: 33px;
+}
+
+.vacancies-creation__responsibilities-textarea, .vacancies-creation__conditions-textarea, .vacancies-creation__description-textarea{
+    height: 200px;
+    margin-bottom: 5px;
+}
+
+.vacancies__description-error, .vacancies__responsibilities-error, .vacancies__conditions-error, .vacancies__requirements-error{
+    margin-top: -10px;
+}
+
+.vacancies-creation__textarea.exceeding-limit{
+    border-color: #F04949;
+    outline: none;
+}
+
+.vacancies-creation__skills-textarea{
+    margin-bottom: 5px;
+}

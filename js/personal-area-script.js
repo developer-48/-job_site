@@ -607,7 +607,7 @@ personalAreaSave.on("click", () =>{
                     if($(`.personal-area__article-item[blockid=${i}] .personal-area__specification-article-input`).val() == ""){
                         specificationArticleBool = false;
                     } 
-                    if(document.querySelector(`#upload-article${i}`).files.length == 0 && $(`#upload-article${i}`).attr('article-was') == "true"){
+                    if(document.querySelector(`#upload-article${i}`).files.length == 0 && $(`#upload-article${i}`).attr('article-was') != "true"){
                         articleDovnload = false;
                     }
                 }        

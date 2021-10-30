@@ -298,6 +298,7 @@ addArticleBtn.on("click", () =>{
         `)
         )
         $(`#upload-article${articleId}`).on("change", (event) => uploadArticle(event, articleId))
+        $(`.resume-creation__article-item[blockid=${articleId}] .resume-creation__scrol-delite`).on("click", (event) => deliteArticleFunc(event))
         $(`.resume-creation__article-item[blockid=${articleId-1}]`).addClass("active")
         $(".resume-creation__scrol-block").scrollHeight;
         $(".resume-creation__scrol-block").animate({
@@ -326,20 +327,53 @@ articleBtn.on("click", () =>{
     let articleNameBool = true;
     let specificationArticleBool = true;
     let articleDovnload = true;
-    for(let i = 1; i <= articleId; i++){        
-        if(articleRemoveId.indexOf(i) == -1){
-            if($(`.resume-creation__article-item[blockid=${i}] .resume-creation__article-name-input`).val() == ""){
-            articleNameBool = false;
-            } 
-            if($(`.resume-creation__article-item[blockid=${i}] .resume-creation__specification-article-input`).val() == ""){
-                specificationArticleBool = false;
-            } 
-            if(document.querySelector(`#upload-article${i}`).files.length == 0){
-                articleDovnload = false;
+
+
+    if(articleId == 1 ){
+        if($(`.resume-creation__article-item[blockid=1] .resume-creation__article-name-input`).val() != "" && $(`.resume-creation__article-item[blockid=1] .resume-creation__specification-article-input`).val() != ""){
+            if(document.querySelector(`#upload-article1`).files.length == 0 && $(`#upload-article1`).attr('article-was') != "true"){
+                articleDovnload = false
+                
             }
+        }
+        else if($(`.resume-creation__article-item[blockid=1] .resume-creation__article-name-input`).val() != "" || $(`.resume-creation__article-item[blockid=1] .resume-creation__specification-article-input`).val() != "" || document.querySelector(`#upload-article1`).files.length > 0){
+            articleNameBool = false;
+            specificationArticleBool = false;
+            articleDovnload = false;
+        }
+    }
+    else{
+        for(let i = 1; i <= articleId; i++){        
+            if(articleRemoveId.indexOf(i) == -1){
+                if($(`.resume-creation__article-item[blockid=${i}] .resume-creation__article-name-input`).val() == ""){
+                    articleNameBool = false;
+                } 
+                if($(`.resume-creation__article-item[blockid=${i}] .resume-creation__specification-article-input`).val() == ""){
+                    specificationArticleBool = false;
+                } 
+                if(document.querySelector(`#upload-article${i}`).files.length == 0){
+                    articleDovnload = false;
+                }
+            }        
         }
         
     }
+
+    // for(let i = 1; i <= articleId; i++){        
+    //     if(articleRemoveId.indexOf(i) == -1){
+    //         if($(`.resume-creation__article-item[blockid=${i}] .resume-creation__article-name-input`).val() == ""){
+    //         articleNameBool = false;
+    //         } 
+    //         if($(`.resume-creation__article-item[blockid=${i}] .resume-creation__specification-article-input`).val() == ""){
+    //             specificationArticleBool = false;
+    //         } 
+    //         if(document.querySelector(`#upload-article${i}`).files.length == 0){
+    //             articleDovnload = false;
+    //         }
+    //     }
+        
+    // }
+
     if(articleNameBool && specificationArticleBool && articleDovnload){
         $(".resume-form").submit()
         error.text("")
@@ -351,17 +385,18 @@ articleBtn.on("click", () =>{
     
 })
 
-let deliteArticleBtn = $(".resume-creation__scrol-delite")
-
-deliteArticleBtn.on("click", (event) =>{
+let deliteArticleFunc = (event) => {
     let id = event.target.getAttribute("blockid");
-    if(id != 1 || articleId > 1){        
+    if(articleId - articleRemoveId.length > 1){        
         $(`.resume-creation__article-item[blockid=${id}]`).remove()
         articleRemoveId.push(+id);
     }
-    else $(".resume-article-error").text("Нельзя удалить единственную статью*")
-    
-})
+    else  $(".resume-article-error").text("Нельзя удалить единственную статью*")    
+}
+
+let deliteArticleBtn = $(".resume-creation__scrol-delite")
+
+deliteArticleBtn.on("click", (event) => deliteArticleFunc(event))
 
 
 let homeBtnLogo = $(".resume-creation__logo-btn")
