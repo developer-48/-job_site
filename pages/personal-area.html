@@ -58,21 +58,36 @@
                                         <input type="number" class="resume-creation__input personal-area__year-birth-input">
                                     </div>
                                 </div>
+                                <label for="" class="resume-creation__label personal-area__about-me-label">О себе<span>*</span></label>
+                                <textarea name="" id="" class="resume-creation__textarea personal-area__about-me-textarea"></textarea>
+                                <div class="resume-creation__work-textarea-limit personal-area__about-me-textarea-limit">
+                                    <span class="resume-creation__work-textarea-limit-amount personal-area__about-me-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max personal-area__about-me-textarea-limit-max">50</span>
+                                </div>
+                                <div class="resume-error personal-area__about-me-textarea-error"></div>
                                 <label for="" class="resume-creation__label ">Желаемая должность<span>*</span></label>
-                                <input type="text" class="resume-creation__input personal-area__career-objective-input">
+                                <select class="select vacancies-creation__vacancy-education-select">
+                                    <option class="vacancies-creation__vacancy-education-item active" value="Преподаватель">Преподаватель</option>
+                                    <option class="vacancies-creation__vacancy-education-item" value="Преподаватель">Ректор</option>
+                                    <option class="vacancies-creation__vacancy-education-item" value="Высшее образование - специалитет, магистратура">Оператор</option>
+                                </select>
                                 <label for="" class="resume-creation__label personal-area__email-label">E-mail<span>*</span></label>
                                 <input type="text" class="resume-creation__input personal-area__email-input">
-    
+                                <label for="" class="resume-creation__label personal-area__skills-label">Навыки<span>*</span></label>
+                                <textarea name="" id="" placeholder="Пишите навыки через запятую" class="resume-creation__textarea personal-area__skills-textarea"></textarea>
+                                <div class="resume-creation__work-textarea-limit personal-area__skills-textarea-limit">
+                                    <span class="resume-creation__work-textarea-limit-amount personal-area__skills-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max personal-area__skills-textarea-limit-max">50</span>
+                                </div>
+                                <div class="resume-error personal-area__skills-textarea-error"></div>
                                 <div class="personal-area__addition-one-line">
-                                        <label for="" class="resume-creation__label">Пол<span>*</span></label>
-                                        <div class="resume-creation__gender">
-                                            <input name="gender" value="Мужчина" type="radio" checked id="men" class="resume-creation__radio-input personal-area__gender-input">
-                                            <label for="men" class="resume-creation__radio-label resume-creation__gender-label left">Мужчина</label>
-                                            <input name="gender" value="Женщина" type="radio" id="women" class="resume-creation__radio-input personal-area__gender-input">
-                                            <label for="women" class="resume-creation__radio-label right resume-creation__gender-label">Женщина</label>
-                                        </div>
-                                        <label for="" class="resume-creation__label">Гражданство<span>*</span></label>
-                                        <input type="text" class="resume-creation__input personal-area__citizenship-input">                              
+                                    <label for="" class="resume-creation__label">Пол<span>*</span></label>
+                                    <div class="resume-creation__gender">
+                                        <input name="gender" value="Мужчина" type="radio" checked id="men" class="resume-creation__radio-input personal-area__gender-input">
+                                        <label for="men" class="resume-creation__radio-label resume-creation__gender-label left">Мужчина</label>
+                                        <input name="gender" value="Женщина" type="radio" id="women" class="resume-creation__radio-input personal-area__gender-input">
+                                        <label for="women" class="resume-creation__radio-label right resume-creation__gender-label">Женщина</label>
+                                    </div>
+                                    <label for="" class="resume-creation__label">Гражданство<span>*</span></label>
+                                    <input type="text" class="resume-creation__input personal-area__citizenship-input">                              
                                     
                                 </div>
                                 <label for="" class="resume-creation__label resume-creation__city-residence-label">Город проживания<span>*</span></label>
@@ -97,7 +112,11 @@
                             <label for="" class="resume-creation__label personal-area__salary-label">Зарплата от, руб.</label>
                             <input type="text" class="resume-creation__input personal-area__salary-input">
                             <label for="" class="resume-creation__label personal-area__schedule-label">Предпочитаемый график</label>
-                            <input type="text" class="resume-creation__input personal-area__schedule-input">
+                            <select class="select vacancies-creation__vacancy-education-select vacancies-creation__vacancy-schedule-input">
+                                <option class="vacancies-creation__vacancy-education-item active" value="Полный рабочий день">Полный рабочий день</option>
+                                <option class="vacancies-creation__vacancy-education-item" value="Неполный рабочий день">Неполный рабочий день</option>
+                                <option class="vacancies-creation__vacancy-education-item" value="Свободный график">Свободный график</option>
+                            </select>
                             <div class="resume-creation__checbox-container">
                                 <div class="resume-creation__checbox-item">
                                     <input type="checkbox" class="resume-creation__checbox-input" id="business-trips">
@@ -155,7 +174,11 @@
 
                             <div class="personal-area__content-title personal-area__education-title title-mt">Образование</div>
                             <label for="" class="resume-creation__label personal-area__level-education-label">Уровень образования<span>*</span></label>
-                            <input type="text" class="resume-creation__input personal-area__level-education-input">
+                            <select class="select vacancies-creation__vacancy-education-select">
+                                <option class="vacancies-creation__vacancy-education-item active" value="Среднее профессиональное образование">Среднее профессиональное образование</option>
+                                <option class="vacancies-creation__vacancy-education-item" value="Высшее образование - бакалавриат">Высшее образование - бакалавриат</option>
+                                <option class="vacancies-creation__vacancy-education-item" value="Высшее образование - специалитет, магистратура">Высшее образование - специалитет, магистратура</option>
+                            </select>
                             <div class="resume-creation__created-one-line personal-area__education-two-line">
                                 <div class="resume-creation__fulname personal-area__educational-institution">
                                     <label for="" class="resume-creation__label personal-area__educational-institution-label">Учебное заведение<span>*</span></label>
@@ -182,7 +205,7 @@
                                         <div class="resume-creation__upload-article-container">
                                             <div class="personal-area__upload-article-line"></div>
                                             <input type="file" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                                            id="upload-article1" article-was="true"  class="personal-area__upload-article-input" >
+                                            id="upload-article1"  class="personal-area__upload-article-input" >
                                             <label for="upload-article1" class="personal-area__upload-article-label">Загрузить файл</label>
                                         </div>
                                     </div>
@@ -233,5 +256,6 @@
     </div>
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/personal-area-script.js"></script>
+    <script src="/js/select.js"></script>
 </body>
 </html>

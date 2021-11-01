@@ -1,5 +1,8 @@
 let vacanciesTitle = $(".vacancies-creation__vacancy-title-input")
+let vacanciesAddress = $(".vacancies-creation__address-input")
+
 let vacanciesSalary = $(".vacancies-creation__salary-input")
+
 
 let vacanciesDescription = $(".vacancies-creation__description-textarea")
 
@@ -13,6 +16,10 @@ let vacanciesConditions = $(".vacancies-creation__conditions-textarea")
 
 let vacanciesPlaceBlock = $(".vacancies-creation__place")
 let vacanciesPlaceBtn = $(".vacancies-creation__place-btn")
+
+let vacanciesConditionsWorkBlock = $(".vacancies-creation__conditions-one")
+let vacanciesConditionsWorkBackBtn = $(".vacancies-creation__conditions-one-back")
+let vacanciesConditionsWorkBtn = $(".vacancies-creation__conditions-one-btn")
 
 let vacanciesDescriptionBlock = $(".vacancies-creation__description")
 let vacanciesDescriptionBackBtn = $(".vacancies-creation__description-back")
@@ -32,22 +39,37 @@ let vacanciesConditionsBtn = $(".vacancies-creation__conditions-btn")
 
 vacanciesPlaceBtn.on("click", () =>{
     let error = $(".vacancies-place-error");
-    if(vacanciesTitle.val() != "" && vacanciesSalary.val() != ""){  
+    if(vacanciesTitle.val() != "" && vacanciesAddress.val() != ""){ 
         error.text("")      
         vacanciesPlaceBlock.removeClass("active")
-        vacanciesDescriptionBlock.addClass("active")
+        vacanciesConditionsWorkBlock.addClass("active")
     }
     else{
         error.text("Необходимо заполнить все поля*")
     }    
 })
 
-vacanciesDescriptionBackBtn.on("click", () =>{
+vacanciesConditionsWorkBackBtn.on("click", () =>{
     vacanciesPlaceBlock.addClass("active")
-    vacanciesDescriptionBlock.removeClass("active")    
+    vacanciesConditionsWorkBlock.removeClass("active")    
 })
 
+vacanciesConditionsWorkBtn.on("click", () =>{
+    let error = $(".vacancies-conditions-one-error");
+    if(vacanciesSalary.val() != "" && vacanciesAddress.val() != ""){ 
+        error.text("")      
+        vacanciesConditionsWorkBlock.removeClass("active")
+        vacanciesDescriptionBlock.addClass("active")
+    }
+    else{
+        error.text("Необходимо заполнить все поле*")
+    }    
+})
 
+vacanciesDescriptionBackBtn.on("click", () =>{
+    vacanciesConditionsWorkBlock.addClass("active")
+    vacanciesDescriptionBlock.removeClass("active")    
+})
 
 
 vacanciesDescriptionBtn.on("click", () =>{
@@ -106,12 +128,11 @@ vacanciesConditionsBackBtn.on("click", () =>{
 })
 
 
-
-
 vacanciesConditionsBtn.on("click", () =>{
     let error = $(".vacancies__conditions-error");
     if(vacanciesConditions.val() != "" && !vacanciesConditions.hasClass('exceeding-limit')){  
-        error.text("")      
+        error.text("");
+        $(".vacancies-form").submit()   
     }
     else if(!vacanciesConditions.hasClass('exceeding-limit')){
         error.text("Необходимо заполнить поле*")

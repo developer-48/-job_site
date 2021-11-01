@@ -4,23 +4,57 @@ let yearBirth = $(".resume-creation__year-birth-input");
 let careerObjective = $(".resume-creation__career-objective-input");
 let email = $(".resume-creation__email-input");
 
+
+let resumeAboutMe = $(".resume-creation__about-me-textarea")
 createdBtn.on("click", () =>{
     let one = $(".resume-creation__created");
-    let two = $(".resume-creation__addition");
+    let two = $(".resume-creation__about-me");
     let error = $(".resume-created-error");
-    if(fulname.val() != "" && yearBirth.val() != "" && careerObjective.val() != "" && email.val() != ""){  
+    if(fulname.val() != "" && yearBirth.val() != "" && !resumeAboutMe.hasClass("exceeding-limit")){  
         error.text("")      
         one.removeClass("active")
         two.addClass("active")
     }
     else{
-        error.text("Необходимо заполнить все поля*")
+        if(resumeAboutMe.hasClass("exceeding-limit")) error.text("Вы превысили максимальное колличество знаков в поле*")
+        else error.text("Необходимо заполнить все поля*")
     }    
 })
 
+
+
+let aboutMeBackBtn =  $(".resume-creation__about-me-back");
+aboutMeBackBtn.on("click", () =>{
+    let one = $(".resume-creation__created");
+    let two = $(".resume-creation__about-me");
+    one.addClass("active")
+    two.removeClass("active")    
+})
+
+let resumeSkills = $(".resume-creation__skills-textarea")
+let aboutMeBtn =  $(".resume-creation__about-me-btn");
+aboutMeBtn.on("click", () =>{
+    let one = $(".resume-creation__about-me");
+    let two = $(".resume-creation__addition");
+    let error = $(".resume-about-me-error")
+    if(careerObjective.val() != "" && email.val() != "" && !resumeSkills.hasClass("exceeding-limit")){  
+        error.text("")      
+        one.removeClass("active")
+        two.addClass("active")
+    }
+    else{
+        if(resumeSkills.hasClass("exceeding-limit")) error.text("Вы превысили максимальное колличество знаков в поле*")
+        else error.text("Необходимо заполнить все поля*")
+    } 
+         
+    
+})
+
+
+
 let additionBackBtn =  $(".resume-creation__addition-back");
 additionBackBtn.on("click", () =>{
-    let one = $(".resume-creation__created");
+    let one = $(".resume-creation__about-me");
     let two = $(".resume-creation__addition");
     one.addClass("active")
     two.removeClass("active")    
@@ -359,21 +393,6 @@ articleBtn.on("click", () =>{
         
     }
 
-    // for(let i = 1; i <= articleId; i++){        
-    //     if(articleRemoveId.indexOf(i) == -1){
-    //         if($(`.resume-creation__article-item[blockid=${i}] .resume-creation__article-name-input`).val() == ""){
-    //         articleNameBool = false;
-    //         } 
-    //         if($(`.resume-creation__article-item[blockid=${i}] .resume-creation__specification-article-input`).val() == ""){
-    //             specificationArticleBool = false;
-    //         } 
-    //         if(document.querySelector(`#upload-article${i}`).files.length == 0){
-    //             articleDovnload = false;
-    //         }
-    //     }
-        
-    // }
-
     if(articleNameBool && specificationArticleBool && articleDovnload){
         $(".resume-form").submit()
         error.text("")
@@ -429,3 +448,28 @@ cancellationExitHome.on("click", ()=>{
         resumePopUp.css('display', 'none')
     }, 1000)
 })
+
+let onInputFunc = (event, block, error) =>{
+    let count = event.target.value.length
+    let responsibilitiesLimitMax = $(`.resume-creation__${block}-textarea-limit-max`)
+    let responsibilitiesLimitAmount = $(`.resume-creation__${block}-textarea-limit-amount`)
+    let blockError = $(`.resume-${error}-error`)
+    let textareaBlock = $(`.resume-creation__${block}-textarea`)
+    let limit = +responsibilitiesLimitMax.text() 
+    responsibilitiesLimitAmount.text(count)
+    if(count > limit){
+        responsibilitiesLimitAmount.addClass("exceeding")
+        textareaBlock.addClass("exceeding-limit")
+        blockError.text('Вы превысили максимальное колличество знаков в поле*')
+    }
+    else 
+    {
+        responsibilitiesLimitAmount.removeClass("exceeding")
+        textareaBlock.removeClass("exceeding-limit")
+        blockError.text('')
+    }
+}
+
+resumeAboutMe.on("input", (event) => onInputFunc(event, "about-me", "created"))
+
+resumeSkills.on("input", (event) => onInputFunc(event, "skills", "about-me"))

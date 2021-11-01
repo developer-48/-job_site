@@ -198,5 +198,9 @@ vacanciesfavorites.on("click", () =>{
     }
 })
 
-
+$(".content__city-icon").on("click", () => {    
+    if($(".typeEmployment__remoteWork-select").hasClass("on")) $(".typeEmployment__remoteWork-select").removeClass("on")
+    else $(".typeEmployment__remoteWork-select").addClass("on")
+    $(".typeEmployment__remoteWork-select-new-select__list").slideToggle(400)
+})
 

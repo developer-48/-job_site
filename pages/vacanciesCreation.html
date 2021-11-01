@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Создание резюме</title>
+    <title>Создание Вакансию</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -20,18 +20,73 @@
                 </a>
             </div>
             <div class="resume-creation__content">
-                <form class = "resume-form">
+                <form class = "vacancies-form">
                     <div class="resume-creation__container vacancies-creation__container vacancies-creation__place active">
                         <div class="resume-creation__content-title vacancies-creation__place-title">Разместить вакансию</div>
                         <div class="resume-creation__exit-btn vacancies-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label vacancies-creation__vacancy-category-label">Категория<span>*</span></label>
+                        <select class="select vacancies-creation__vacancy-education-select vacancies-creation__vacancy-category-input">
+                            <option class="vacancies-creation__vacancy-education-item active" value="Преподаватель">Преподаватель</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Ректор">Ректор</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Оператор">Оператор</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Секретарь">Секретарь</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Заведующий хоз-частью">Заведующий хоз-частью</option>
+                        </select>
                         <label for="" class="resume-creation__label vacancies-creation__vacancy-title-label">Заголовок<span>*</span></label>
                         <input type="text" class="resume-creation__input vacancies-creation__vacancy-title-input" >
-                        <label for="" class="resume-creation__label vacancies-creation__salary-label">Заработная плата<span>*</span></label>
-                        <input type="text" class="resume-creation__input vacancies-creation__salary-input">
+                        <label for="" class="resume-creation__label vacancies-creation__address-label">Адрес<span>*</span></label>
+                        <input type="text" class="resume-creation__input vacancies-creation__address-input">
                         <div class="resume-error vacancies-place-error"></div>
                         <div class="resume-creation__btn vacancies-creation__place-btn">Продолжить</div>
 
                         <div class="resume-creation__created-terms-use">Размищая вакансию, вы принимаете условия <a href="#">Правил</a> и <a href="#">Соглашения</a> <br>об использовании сайта Ishi.ru</div>
+                    </div>
+
+                    <div class="resume-creation__container vacancies-creation__container vacancies-creation__conditions-one">
+                        <div class="resume-creation__back-btn vacancies-creation__conditions-one-back"></div>
+                        <div class="resume-creation__content-title vacancies-creation__conditions-one-title">Условия</div>
+                        <div class="resume-creation__exit-btn vacancies-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label vacancies-creation__salary-label">Заработная плата<span>*</span></label>
+                        <input type="text" class="resume-creation__input vacancies-creation__salary-input">
+                        <div class="vacancies-creation__salary-checkbox">
+                            <input type="radio" checked class="resume-creation__checbox-input " id="month" name="salary">
+                            <label for="month" class="resume-creation__checbox-label  vacancies-creation__checkbox-label">За месяц</label>
+                            <input type="radio" class="resume-creation__checbox-input " id="change" name="salary">
+                            <label for="change" class="resume-creation__checbox-label  vacancies-creation__checkbox-label">За смену</label>                              
+                            <input type="radio" class="resume-creation__checbox-input " id="hours" name="salary">
+                            <label for="hours" class="resume-creation__checbox-label  vacancies-creation__checkbox-label">За час</label>                           
+                        </div>
+                        <label for="" class="resume-creation__label vacancies-creation__vacancy-employment-label">Тип занятости<span>*</span></label>
+                        <div class="vacancies-creation__employment">
+                            <div class="vacancies-creation__employment-one">
+                                <input type="radio" checked name="employment" class="resume-creation__checbox-input" id="full-time">
+                                <label for="full-time" class=" resume-creation__checbox-label vacancies-creation__checkbox-label active">Полный рабочий день</label>
+                                <input type="radio" name="employment" class=" resume-creation__checbox-input" id="free-schedule">
+                                <label for="free-schedule" class="resume-creation__checbox-label vacancies-creation__checkbox-label">Свободный график</label>
+                            </div>
+                            <div class="vacancies-creation__employment-two">                                
+                                <input type="radio" name="employment" class=" resume-creation__checbox-input " id="part-time">
+                                <label for="part-time" class="resume-creation__checbox-label vacancies-creation__checkbox-label">Неполный рабочий день</label>
+                                <input type="checkbox" class="resume-creation__checbox-input " id="remote-work">
+                                <label for="remote-work" class="resume-creation__checbox-label vacancies-creation__checkbox-label">Удаленная работа</label>
+                            </div>                            
+                        </div>
+                        
+                        <label for="" class="resume-creation__label vacancies-creation__vacancy-category-label">Условия работы<span>*</span></label>
+                        <div class="vacancies-creation__conditions-work">
+                            <div class="vacancies-creation__conditions-work-one">
+                                <input type="checkbox" class="resume-creation__checbox-input " id="accessible-minors">
+                                <label for="accessible-minors" class="resume-creation__checbox-label  vacancies-creation__checkbox-label">Можно до 18 лет</label>
+                                <input type="checkbox" class="resume-creation__checbox-input " id="without-experience">
+                                <label for="without-experience" class="resume-creation__checbox-label  vacancies-creation__checkbox-label">Без опыта</label>
+                            </div>
+                            <div class="vacancies-creation__conditions-work-two">                                
+                                <input type="checkbox" class="resume-creation__checbox-input " id="people-disabilities">
+                                <label for="people-disabilities" class="resume-creation__checbox-label  vacancies-creation__checkbox-label">Доступно <img class="disabledPerson-icon" src="/img/disbledPerson-icon.svg" alt=""></label>
+                            </div>                            
+                        </div>
+                        <div class="resume-error vacancies-conditions-one-error"></div>
+                        <div class="resume-creation__btn vacancies-creation__conditions-one-btn">Продолжить</div>
                     </div>
 
                     <div class="resume-creation__container vacancies-creation__container vacancies-creation__description">

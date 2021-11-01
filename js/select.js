@@ -60,7 +60,8 @@ const selectFunc = (name) =>{
         });
     });
 }
-
+selectFunc("content__search-select")
 selectFunc("typeEmployment__watch-select")
 selectFunc("typeEmployment__remoteWork-select")
 selectFunc("vacancies-creation__vacancy-education-select")
+

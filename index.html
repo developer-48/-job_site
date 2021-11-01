@@ -25,15 +25,24 @@
             </div>
         </div>
     </div>
+    
     <div class="content">
         <div class="wrap">
             <h1 class="content__title">Работа в Грозном</h1>
             <form class="content__search-parent">
                 <div class="content__search">
                     <img src="./img/search_icon.png" alt="" class="content__search-icon">
-                    <input type="text" autocomplete="off" placeholder="Должность, компания" class="content__search-field"></input>
-                    <img src="./img/cityLocation_icon.png" alt="" class="content__city-icon">
-                    <div class="content__search-city">Грозный</div>
+                    <input type="text" autocomplete="off" for="example" list="character" placeholder="Должность, компания" class="content__search-field"></input>
+                    <div class="content__search-icon-container">
+                        <img src="./img/cityLocation_icon.png" alt="" class="content__city-icon">
+                        <select class="select content__search-select">
+                            <option class="content__search-select-item active" value="ЧГУ - 1 корпус">ЧГУ - 1 корпус</option>
+                            <option class="content__search-select-item" value="ЧГУ - 2 корпус">ЧГУ - 2 корпус</option>
+                            <option class="content__search-select-item" value="ЧГУ - 3 корпус">ЧГУ - 3 корпус</option>
+                            <option class="content__search-select-item" value="ЧГУ - 4 корпус">ЧГУ - 4 корпус</option>
+                        </select>
+                    </div>
+                    <!-- <div class="content__search-city">Грозный</div> -->
                 </div>
                 <button class="content__search-btn">Показать вакансии</button>
             </form>
@@ -63,11 +72,12 @@
                     <div class="content__filters-item content__filters-item-typeEmployment">Тип занятости <img src="./img/line.png" alt="" class="content__filters-line"> <span class="content__filters-item-val  typeEmployment-value"> Любой</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
                     <div class="content__filters-popup content__filters-popup-typeEmployment">
                         <div class="filters-popup__arrow"></div>
-                        <label class = "typeEmployment__watch-Lable">Работа вахтой</label>
+                        <label class = "typeEmployment__watch-Lable">График работы</label>
                         <select class="select typeEmployment__watch-select">
                             <option class="typeEmployment__watch-item active" value="Неважно">Неважно</option>
-                            <option class="typeEmployment__watch-item" value="Только вахта">Только вахта</option>
-                            <option class="typeEmployment__watch-item" value="Без вахты">Без вахты</option>
+                            <option class="typeEmployment__watch-item" value="Полный рабочий день">Полный рабочий день</option>
+                            <option class="typeEmployment__watch-item" value="Неполный рабочий день">Неполный рабочий день</option>
+                            <option class="typeEmployment__watch-item" value="Свободный график">Свободный график</option>
                         </select>
                         <label class = "typeEmployment__remoteWork-Lable">Удаленная работа</label>
                         <select class="select typeEmployment__remoteWork-select">
@@ -83,10 +93,6 @@
                     <div class="content__filters-popup content__filters-popup-conditions">
                         <div class="filters-popup__arrow"></div>
                         <div class="content-filters__conditions">
-                            <div class="content-conditions__checkbox-container">
-                                <input type="checkbox" name="" id="partTime" class="content-conditions__checkbox conditions-partTime">
-                                <label for="partTime" class="content-conditions__label conditions-partTime__label">Неполный рабочий день</label>
-                            </div>
                             <div class="content-conditions__checkbox-container">
                                 <input type="checkbox" name="" id="notExperience" class="content-conditions__checkbox conditions-notExperience">
                                 <label for="notExperience" class="content-conditions__label conditions-notExperience__label">Без опыта</label>

@@ -34,14 +34,36 @@
                                 <input type="number" class="resume-creation__input resume-creation__year-birth-input">
                             </div>
                         </div>
-                        <label for="" class="resume-creation__label resume-creation__career-objective-label">Желаемая должность<span>*</span></label>
-                        <input type="text" class="resume-creation__input resume-creation__career-objective-input">
-                        <label for="" class="resume-creation__label resume-creation__email-label">E-mail или мобильный телефон<span>*</span></label>
-                        <input type="text" class="resume-creation__input resume-creation__email-input">
+                        <label for="" class="resume-creation__label resume-creation__about-me-label">О себе<span>*</span></label>
+                        <textarea name="" id="" class="resume-creation__textarea resume-creation__about-me-textarea"></textarea>
+                        <div class="resume-creation__work-textarea-limit resume-creation__about-me-textarea-limit">
+                            <span class="resume-creation__work-textarea-limit-amount resume-creation__about-me-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max resume-creation__about-me-textarea-limit-max">50</span>
+                        </div>
                         <div class="resume-error resume-created-error"></div>
                         <div class="resume-creation__btn resume-creation__created-btn">Продолжить</div>
 
                         <div class="resume-creation__created-terms-use">Регистрируясь, вы принимаете условия <a href="#">Правил</a> и <a href="#">Соглашения</a> <br>об использовании сайта Ishi.ru</div>
+                    </div>
+
+                    <div class="resume-creation__container resume-creation__about-me">
+                        <div class="resume-creation__back-btn resume-creation__about-me-back"></div>
+                        <div class="resume-creation__content-title resume-creation__about-me-title">Навыки</div>
+                        <div class="resume-creation__exit-btn"></div>
+                        <label for="" class="resume-creation__label resume-creation__career-objective-label ">Желаемая должность<span>*</span></label>
+                        <select class="select vacancies-creation__vacancy-education-select">
+                            <option class="vacancies-creation__vacancy-education-item active" value="Преподаватель">Преподаватель</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Преподаватель">Ректор</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Высшее образование - специалитет, магистратура">Оператор</option>
+                        </select>
+                        <label for="" class="resume-creation__label resume-creation__email-label">E-mail<span>*</span></label>
+                        <input type="text" class="resume-creation__input resume-creation__email-input">
+                        <label for="" class="resume-creation__label resume-creation__skills-label">Навыки<span>*</span></label>
+                        <textarea name="" id="" placeholder="Пишите навыки через запятую" class="resume-creation__textarea resume-creation__skills-textarea"></textarea>
+                        <div class="resume-creation__work-textarea-limit resume-creation__skills-textarea-limit">
+                            <span class="resume-creation__work-textarea-limit-amount resume-creation__skills-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max resume-creation__skills-textarea-limit-max">50</span>
+                        </div>                        
+                        <div class="resume-error resume-about-me-error resume-skills-error "></div>
+                        <div class="resume-creation__btn resume-creation__about-me-btn">Продолжить</div>
                     </div>
 
                     <div class="resume-creation__container resume-creation__addition" >
@@ -91,7 +113,11 @@
                         <label for="" class="resume-creation__label resume-creation__salary-label">Зарплата от, руб.</label>
                         <input type="text" class="resume-creation__input resume-creation__salary-input">
                         <label for="" class="resume-creation__label resume-creation__schedule-label">Предпочитаемый график</label>
-                        <input type="text" class="resume-creation__input resume-creation__schedule-input">
+                        <select class="select vacancies-creation__vacancy-education-select vacancies-creation__vacancy-schedule-input">
+                            <option class="vacancies-creation__vacancy-education-item active" value="Полный рабочий день">Полный рабочий день</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Неполный рабочий день">Неполный рабочий день</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Свободный график">Свободный график</option>
+                        </select>
                         <div class="resume-creation__checbox-container">
                             <div class="resume-creation__checbox-item">
                                 <input type="checkbox" class="resume-creation__checbox-input" id="business-trips">
@@ -161,7 +187,11 @@
                         <div class="resume-creation__content-title resume-creation__education-title">Образование</div>
                         <div class="resume-creation__exit-btn"></div>
                         <label for="" class="resume-creation__label resume-creation__level-education-label">Уровень образования<span>*</span></label>
-                        <input type="text" class="resume-creation__input resume-creation__level-education-input">
+                        <select class="select vacancies-creation__vacancy-education-select">
+                            <option class="vacancies-creation__vacancy-education-item active" value="Среднее профессиональное образование">Среднее профессиональное образование</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Высшее образование - бакалавриат">Высшее образование - бакалавриат</option>
+                            <option class="vacancies-creation__vacancy-education-item" value="Высшее образование - специалитет, магистратура">Высшее образование - специалитет, магистратура</option>
+                        </select>
                         <div class="resume-creation__created-one-line resume-creation__education-two-line">
                             <div class="resume-creation__fulname resume-creation__educational-institution">
                                 <label for="" class="resume-creation__label resume-creation__educational-institution-label">Учебное заведение<span>*</span></label>
@@ -229,5 +259,6 @@
     </div>
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/resume-creation-script.js"></script>
+    <script src="/js/select.js"></script>
 </body>
 </html>

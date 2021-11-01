@@ -1,0 +1,71 @@
+<div class="resume-creation__container resume-creation__created active">
+    <div class="resume-creation__content-title resume-creation__created-title">Создание резюме</div>
+    <div class="resume-creation__exit-btn"></div>
+    <div class="resume-creation__created-one-line">
+        <div class="resume-creation__fulname">
+            <label for="" class="resume-creation__label resume-creation__fulname-label">Имя и Фамилия<span>*</span></label>
+            <input type="text" class="resume-creation__input resume-creation__fulname-input">
+        </div>
+        <div class="resume-creation__year-birth">
+            <label for="" class="resume-creation__label resume-creation__year-birth-label">Год рождения<span>*</span></label>
+            <input type="number" class="resume-creation__input resume-creation__year-birth-input">
+        </div>
+    </div>
+    <label for="" class="resume-creation__label resume-creation__about-me-label">О себе<span>*</span></label>
+    <textarea name="" id="" class="resume-creation__textarea resume-creation__about-me-textarea"></textarea>
+    <div class="resume-creation__work-textarea-limit resume-creation__about-me-textarea-limit">
+        <span class="resume-creation__work-textarea-limit-amount resume-creation__about-me-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max resume-creation__about-me-textarea-limit-max">50</span>
+    </div>
+    <div class="resume-error resume-created-error"></div>
+    <div class="resume-creation__btn resume-creation__created-btn">Продолжить</div>
+
+    <div class="resume-creation__created-terms-use">Регистрируясь, вы принимаете условия <a href="#">Правил</a> и <a href="#">Соглашения</a> <br>об использовании сайта Ishi.ru</div>
+</div>
+
+<div class="resume-creation__container resume-creation__about-me">
+    <div class="resume-creation__back-btn resume-creation__about-me-back"></div>
+    <div class="resume-creation__content-title resume-creation__about-me-title">Навыки</div>
+    <div class="resume-creation__exit-btn"></div>
+    <label asp-for="Rezumes.WantWork" for="" class="resume-creation__label resume-creation__career-objective-label">Желаемая должность<span>*</span></label>
+    <select asp-for="Rezumes.WantWork" name="Rezumes.WantWork" class="select vacancies-creation__vacancy-education-select">
+        <option class="vacancies-creation__vacancy-education-item active" value="Преподаватель">Преподаватель</option>
+        <option class="vacancies-creation__vacancy-education-item" value="Преподаватель">Ректор</option>
+        <option class="vacancies-creation__vacancy-education-item" value="Высшее образование - специалитет, магистратура">Оператор</option>
+    </select>
+    <label asp-for="Rezumes.JobsEmail" for="" class="resume-creation__label resume-creation__email-label">E-mail или мобильный телефон<span>*</span></label>
+    <input asp-for="Rezumes.JobsEmail" name="Rezumes.JobsEmail" type="text" class="resume-creation__input resume-creation__email-input">
+    <label for="" class="resume-creation__label resume-creation__skills-label">Навыки<span>*</span></label>
+    <textarea name="" id="" placeholder="Пишите навыки через запятую" class="resume-creation__textarea resume-creation__skills-textarea"></textarea>
+    <div class="resume-creation__work-textarea-limit resume-creation__skills-textarea-limit">
+        <span class="resume-creation__work-textarea-limit-amount resume-creation__skills-textarea-limit-amount">0</span>/<span class="resume-creation__work-textarea-limit-max resume-creation__skills-textarea-limit-max">50</span>
+    </div>                        
+    <div class="resume-error resume-about-me-error resume-skills-error "></div>
+    <div class="resume-creation__btn resume-creation__about-me-btn">Продолжить</div>
+</div>
+
+
+
+
+
+<!-- после год рождения -->
+<label for="" class="resume-creation__label personal-area__about-me-label">О себе<span>*</span></label>
+<textarea name="" id="" class="resume-creation__textarea personal-area__about-me-textarea"></textarea>
+<div class="resume-creation__work-textarea-limit personal-area__about-me-textarea-limit">
+    <span class="resume-creation__work-textarea-limit-amount personal-area__about-me-textarea-limit-amount">0</span>
+    /
+    <span class="resume-creation__work-textarea-limit-max personal-area__about-me-textarea-limit-max">50</span>
+</div>
+<div class="resume-error personal-area__skills-textarea-error"></div>
+
+
+<!-- после E-mail -->
+<label for="" class="resume-creation__label personal-area__email-label">E-mail<span>*</span></label>
+<input type="text" class="resume-creation__input personal-area__email-input">
+<label for="" class="resume-creation__label personal-area__skills-label">Навыки<span>*</span></label>
+<textarea name="" id="" placeholder="Пишите навыки через запятую" class="resume-creation__textarea personal-area__skills-textarea"></textarea>
+<div class="resume-creation__work-textarea-limit personal-area__skills-textarea-limit">
+    <span class="resume-creation__work-textarea-limit-amount personal-area__skills-textarea-limit-amount">0</span>
+    /
+    <span class="resume-creation__work-textarea-limit-max personal-area__skills-textarea-limit-max">50</span>
+</div>
+<div class="resume-error personal-area__about-me-textarea-error"></div>

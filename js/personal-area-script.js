@@ -331,6 +331,10 @@
 
 let fulname = $(".personal-area__fulname-input");
 let yearBirth = $(".personal-area__year-birth-input");
+
+let aboutMe = $(".personal-area__about-me-textarea")
+let skills = $(".personal-area__skills-textarea")
+
 let careerObjective = $(".personal-area__career-objective-input");
 let email = $(".personal-area__email-input");
 
@@ -468,6 +472,7 @@ addArticleBtn.on("click", () =>{
     if(articleNameBool && specificationArticleBool && articleDovnload){
         addAticleError.text("")
         articleId++
+        $(".personal-area__not-articles").remove()
         $(".personal-area__scrol-block").append(
             $(`
             <div class="personal-area__scrol-item personal-area__article-item" blockid = "${articleId}">
@@ -506,14 +511,21 @@ addArticleBtn.on("click", () =>{
 })
 
 let deliteArticleFunc = (event) => {
-    let id = event.target.getAttribute("blockid");
-    if(articleId - articleRemoveId.length > 1){        
-        $(`.personal-area__article-item[blockid=${id}]`).remove()
-        articleRemoveId.push(+id);
+    let id = event.target.getAttribute("blockid");        
+    $(`.personal-area__article-item[blockid=${id}]`).css('display', 'none')
+    $(`.personal-area__article-item[blockid=${id}] .personal-area__article-name-input`).val("delete")
+    $(`.personal-area__article-item[blockid=${id}] .personal-area__specification-article-input`).val($(`#upload-article${id}`).attr("value"))
+    articleRemoveId.push(+id);
+    if(articleId - articleRemoveId.length == 0){
+        $(".personal-area__scrol-block").append(
+            $(
+                `<div class="personal-area__not-articles">
+                У вас нет статей! <br> Чтобы добавить нажмите на кнопку ниже!
+            </div>`
+            )
+        )
     }
-    else $(".personal-area__article-error").text("Нельзя удалить единственную статью*")
-    savebtn()
-    
+    savebtn()    
 }
 
 let deliteArticleBtn = $(".personal-area__scrol-delite")
@@ -551,13 +563,14 @@ personalAreaSave.on("click", () =>{
     let article = false;
     
     if(availabilityChanges){
-        if(fulname.val() != "" && yearBirth.val() != "" && careerObjective.val() != "" && email.val() != "" && citizenship.val() != "" && cityResidence.val() != "" && userPhone.val() != ""){  
+        if(fulname.val() != "" && yearBirth.val() != "" && careerObjective.val() != "" && email.val() != "" && citizenship.val() != "" && cityResidence.val() != "" && userPhone.val() != "" && !aboutMe.hasClass("exceeding-limit") && !skills.hasClass("exceeding-limit")){
             personalDataError.text("")
             personalData = true;
             // все заполнено      
         }
         else{
-            personalDataError.text("Необходимо заполнить все поля*")
+            if(aboutMe.hasClass("exceeding-limit")) personalDataError.text("Вы превысили максимальное колличество знаков*")
+            else personalDataError.text("Необходимо заполнить все поля*")
         }
     
         if(workedCompany.val() != "" && workedPosition.val() != "" && workedBeginningMonth.val() != "" && workedBeginningYear.val() != "" && ((workedEndMonth.val() != "" && workedEndYear.val() != "") || workedEndNow.is(':checked')) && workedResponsibilities.val() != ""){
@@ -682,3 +695,41 @@ cancellationExitHome.on("click", ()=>{
     $('.personal-area__popup-block.exit-home').css('display', 'none')
     $('.personal-area__popup-block.delete-account').css('display', 'none')
 })
+
+
+
+$(".resume-creation__checbox-input.checked").attr('checked', 'checked')
+
+$(".personal-area__article-name-input").attr("readonly", "readonly");
+$(".personal-area__specification-article-input").attr("readonly", "readonly");
+$(".personal-area__upload-article-input").addClass("read-only")
+$(".personal-area__upload-article-input").on("click", (e) => {
+    e.preventDefault();
+})
+
+
+
+let onInputFunc = (event, block) =>{
+    let count = event.target.value.length
+    let responsibilitiesLimitMax = $(`.personal-area__${block}-textarea-limit-max`)
+    let responsibilitiesLimitAmount = $(`.personal-area__${block}-textarea-limit-amount`)
+    let blockError = $(`.personal-area__${block}-textarea-error`)
+    let textareaBlock = $(`.personal-area__${block}-textarea`)
+    let limit = +responsibilitiesLimitMax.text() 
+    responsibilitiesLimitAmount.text(count)
+    if(count > limit){
+        responsibilitiesLimitAmount.addClass("exceeding")
+        textareaBlock.addClass("exceeding-limit")
+        blockError.text('Вы превысили максимальное колличество знаков в поле*')
+    }
+    else 
+    {
+        responsibilitiesLimitAmount.removeClass("exceeding")
+        textareaBlock.removeClass("exceeding-limit")
+        blockError.text('')
+    }
+}
+
+aboutMe.on("input", (event) => onInputFunc(event, "about-me"))
+
+skills.on("input", (event) => onInputFunc(event, "skills"))
