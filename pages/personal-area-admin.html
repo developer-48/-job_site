@@ -29,9 +29,9 @@
                 <div class="personal-area-admin__container">
                     <div class="personal-area-admin__sidebar">
                         <div class="personal-area-admin__sidebar-menu">
-                            <a href=""><div class="personal-area-admin__sidebar-item vacancies active">Вакансии</div></a>
-                            <a href=""><div class="personal-area-admin__sidebar-item responses">Отклики</div></a>
-                            <a href=""><div class="personal-area-admin__sidebar-item categories">Категории</div></a>                            
+                            <a href="/pages/personal-area-admin.html"><div class="personal-area-admin__sidebar-item vacancies active">Вакансии</div></a>
+                            <a href="/pages/personal-area-admin-responses.html"><div class="personal-area-admin__sidebar-item responses">Отклики</div></a>
+                            <a href="/pages/personal-area-admin-categories.html"><div class="personal-area-admin__sidebar-item categories">Категории</div></a>                             
                         </div>
                     </div>
                     <div class="personal-area-admin__right">
@@ -139,5 +139,16 @@
             </div>
         </div>
     </div>
+    <script>
+        let vacanciesfavorites = document.querySelector(".vacancies__favorites-btn");
+        vacanciesfavorites.addEventListener("click", () =>{
+            if(!vacanciesfavorites.classList.contains("active")){
+                vacanciesfavorites.classList.add("active");
+            }
+            else{
+                vacanciesfavorites.classList.remove("active");
+            }
+        })
+    </script>
 </body>
 </html>

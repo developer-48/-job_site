@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ищи.ру</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./slick/slick.css">
+    <link rel="stylesheet" href="./slick/slick-theme.css">
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="header__nav">
+                <div class="header__menu">
+                    <img src="./img/logo.png" alt="" class="header__logo">
+                    <a href="/pages/vacanciesCreation.html" class="header__menu-item">Вакансии</a>
+                    <a href="/pages/authorization.html" class="header__menu-item">Профессии</a>
+                </div>
+                <div class="header__buttons">
+                    <a href="/pages/resumeСreation.html"><div class="header__btn-createResume">Создать вакансию</div></a>
+                    <a href="/pages/personal-area.html"><div class="header__btn-hiring">Личный кабинет</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="wrap">
+            <h1 class="content__title">Работа в ЧГУ</h1>
+            <form class="content__search-parent">
+                <div class="content__search">
+                    <img src="./img/search_icon.png" alt="" class="content__search-icon">
+                    <input type="text" autocomplete="off" for="example" list="character" placeholder="Должность" class="content__search-field"></input>
+                    <div class="content__search-icon-container">
+                        <img src="./img/cityLocation_icon.png" alt="" class="content__city-icon">
+                        <select class="select content__search-select">
+                            <option class="content__search-select-item active" value="ЧГУ - 1 корпус">ЧГУ - 1 корпус</option>
+                            <option class="content__search-select-item" value="ЧГУ - 2 корпус">ЧГУ - 2 корпус</option>
+                            <option class="content__search-select-item" value="ЧГУ - 3 корпус">ЧГУ - 3 корпус</option>
+                            <option class="content__search-select-item" value="ЧГУ - 4 корпус">ЧГУ - 4 корпус</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="content__search-btn">Показать резюме</button>
+            </form>
+            <div class="content__filters">
+                <div class="content__filters-container">
+                    <div class="content__filters-item content__filters-item-salary">Зарплата <img src="./img/line.png" alt="" class="content__filters-line"> <span class="content__filters-item-val">Любая</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
+                    <div class="content__filters-popup content__filters-popup-salary">
+                        <div class="filters-popup__arrow"></div>
+                        <div class="content__filters-salary">
+                            <div class="content__filters-top">
+                                <div class="content__filters-title">Зарплата</div>
+                                <div class="content__filters-salary-meaning">Любая</div>
+                            </div>
+                            <div class="content__filters-salary-parrent" >
+                                <input min="0" max="150000" step = "5000" data- value="0" type="range" name="salary" class="content__filters-salary-slider"/>
+                            </div>
+                            <div class="content__filters-paymentOption">
+                                <div class="content__paymentChange content__filters-month active">За месяц</div>
+                                <div class="content__paymentChange content__filters-relay">За смену</div>
+                                <div class="content__paymentChange content__filters-hour">За час</div>
+                            </div>
+                            <button class="content__filters-applyBtn salary-apply">Применить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__filters-container">
+                    <div class="content__filters-item content__filters-item-typeEmployment">Тип занятости <img src="./img/line.png" alt="" class="content__filters-line"> <span class="content__filters-item-val  typeEmployment-value"> Любой</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
+                    <div class="content__filters-popup content__filters-popup-typeEmployment">
+                        <div class="filters-popup__arrow"></div>
+                        <label class = "typeEmployment__watch-Lable">График работы</label>
+                        <select class="select typeEmployment__watch-select">
+                            <option class="typeEmployment__watch-item active" value="Неважно">Неважно</option>
+                            <option class="typeEmployment__watch-item" value="Полный рабочий день">Полный рабочий день</option>
+                            <option class="typeEmployment__watch-item" value="Неполный рабочий день">Неполный рабочий день</option>
+                            <option class="typeEmployment__watch-item" value="Свободный график">Свободный график</option>
+                        </select>
+                        <label class = "typeEmployment__remoteWork-Lable">Удаленная работа</label>
+                        <select class="select typeEmployment__remoteWork-select">
+                            <option class="typeEmployment__remoteWork-item active" value="Неважно">Неважно</option>
+                            <option class="typeEmployment__remoteWork-item" value="Только вахта">Только удаленная</option>
+                            <option class="typeEmployment__remoteWork-item" value="Без вахты">Без удаленной</option>
+                        </select>
+                        <button class="content__filters-applyBtn typeEmloement-apply">Применить</button>
+                    </div>
+                </div>
+                <div class="content__filters-container content__filters-">
+                    <div class="content__filters-item content__filters-item-conditions">Условия работы <img src="./img/line.png" alt="" class="content__filters-line"> <span class="content__filters-item-val conditions-value"> Любые</span> <img src="./img/arrow-down.png" alt="" class="content__filters-arrow"></div>
+                    <div class="content__filters-popup content__filters-popup-conditions">
+                        <div class="filters-popup__arrow"></div>
+                        <div class="content-filters__conditions">
+                            <div class="content-conditions__checkbox-container">
+                                <input type="checkbox" name="" id="notExperience" class="content-conditions__checkbox conditions-notExperience">
+                                <label for="notExperience" class="content-conditions__label conditions-notExperience__label">Без опыта</label>
+                            </div>
+                            <div class="content-conditions__checkbox-container">
+                                <input type="checkbox" name="" id="minor" class="content-conditions__checkbox conditons-minor">
+                                <label for="minor" class="content-conditions__label conditons-minor__label">Можно до 18 лет</label>
+                            </div>
+                            <div class="content-conditions__checkbox-container">
+                                <input type="checkbox" name="" id="disabledPerson" class="content-conditions__checkbox conditions-disabledPerson">
+                                <label for="disabledPerson" class="content-conditions__label conditions-disabledPerson__label">Доступно <img class="disabledPerson-icon" src="/img/disbledPerson-icon.svg" alt=""></label>
+                            </div>
+                            <button class="content__filters-applyBtn conditions-apply">Применить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-two">
+        <div class="wrap">
+            <h1 class="content-two__title">Резюме по должностям</h1>
+            <div class="content-two__slider">
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Преподаватель</div>
+                    <div class="content-two__slide-subtitle">159 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Оператор</div>
+                    <div class="content-two__slide-subtitle">452 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Зав-хоз.</div>
+                    <div class="content-two__slide-subtitle">56 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Преподаватель</div>
+                    <div class="content-two__slide-subtitle">159 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Оператор</div>
+                    <div class="content-two__slide-subtitle">452 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Зав-хоз.</div>
+                    <div class="content-two__slide-subtitle">56 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Преподаватель</div>
+                    <div class="content-two__slide-subtitle">159 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Оператор</div>
+                    <div class="content-two__slide-subtitle">452 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Зав-хоз.</div>
+                    <div class="content-two__slide-subtitle">56 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Преподаватель</div>
+                    <div class="content-two__slide-subtitle">159 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Оператор</div>
+                    <div class="content-two__slide-subtitle">452 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Зав-хоз.</div>
+                    <div class="content-two__slide-subtitle">56 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Преподаватель</div>
+                    <div class="content-two__slide-subtitle">159 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Оператор</div>
+                    <div class="content-two__slide-subtitle">452 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Зав-хоз.</div>
+                    <div class="content-two__slide-subtitle">56 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Преподаватель</div>
+                    <div class="content-two__slide-subtitle">159 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Оператор</div>
+                    <div class="content-two__slide-subtitle">452 резюме</div>
+                </div>
+                <div class="content-two__slider-item">
+                    <img src="./img/slider-img.png" alt="" class="content-two__slide-img"></img>
+                    <div class="content-two__slide-title">Зав-хоз.</div>
+                    <div class="content-two__slide-subtitle">56 резюме</div>
+                </div>
+            </div>
+            <div class="content-two__vacancies">
+                <div class="content-two__vacancies-item responses">
+                    <button class="vacancies__favorites-btn"></button>
+                    <div class="personal-area-admin__responses-title">Петр Семенов</div>
+                    <div class="personal-area-admin__responses-description-title">Описание</div>
+                    <div class="personal-area-admin__responses-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quod quis optio animi est autem ipsa ea eligendi voluptatem repudiandae, commodi nobis, quidem doloribus nihil deserunt. Maxime, inventore nisi! Quibusdam temporibus sed omnis? Aperiam consequuntur cupiditate autem id at, deleniti harum explicabo, recusandae nesciunt sed sapiente? Architecto modi, consequatur sunt impedit aliquid atque ipsa. Accusantium rem sit omnis iure, vero minima hic architecto. Adipisci, sit reprehenderit. Aspernatur vel tempora ullam, sint ab corrupti! Deserunt et, qui sit error aliquid debitis totam distinctio vitae odit nobis, eligendi natus amet dolor alias. Dolores labore quo optio quas. Laudantium et dolorem odit animi explicabo deserunt esse temporibus placeat fuga alias quasi, earum modi blanditiis nisi quia reprehenderit totam est, non perspiciatis aut facilis corrupti, quisquam assumenda. Ea rerum ducimus magnam modi repellat, ad vero, aliquid autem obcaecati necessitatibus culpa porro voluptate tempora repudiandae?
+                    </div>
+                    <div class="personal-area-admin__responses-points-container">
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/profile.png" alt="" class="admin-responses-icons">
+                            <span>Возраст 46 лет</span>
+                        </div>
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/location.png" alt="" class="admin-responses-icons">
+                            <span>г.Грозный, пр-т Путина</span>
+                        </div>
+                    </div>
+                    <div class="personal-area-admin__responses-bottom">
+                        <div class="personal-area-admin__responses-detail">Подробно</div>
+                    </div>
+                </div>
+
+                <div class="content-two__vacancies-item responses">
+                    <button class="vacancies__favorites-btn"></button>
+                    <div class="personal-area-admin__responses-title">Петр Семенов</div>
+                    <div class="personal-area-admin__responses-description-title">Описание</div>
+                    <div class="personal-area-admin__responses-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quod quis optio animi est autem ipsa ea eligendi voluptatem repudiandae, commodi nobis, quidem doloribus nihil deserunt. Maxime, inventore nisi! Quibusdam temporibus sed omnis? Aperiam consequuntur cupiditate autem id at, deleniti harum explicabo, recusandae nesciunt sed sapiente? Architecto modi, consequatur sunt impedit aliquid atque ipsa. Accusantium rem sit omnis iure, vero minima hic architecto. Adipisci, sit reprehenderit. Aspernatur vel tempora ullam, sint ab corrupti! Deserunt et, qui sit error aliquid debitis totam distinctio vitae odit nobis, eligendi natus amet dolor alias. Dolores labore quo optio quas. Laudantium et dolorem odit animi explicabo deserunt esse temporibus placeat fuga alias quasi, earum modi blanditiis nisi quia reprehenderit totam est, non perspiciatis aut facilis corrupti, quisquam assumenda. Ea rerum ducimus magnam modi repellat, ad vero, aliquid autem obcaecati necessitatibus culpa porro voluptate tempora repudiandae?
+                    </div>
+                    <div class="personal-area-admin__responses-points-container">
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/profile.png" alt="" class="admin-responses-icons">
+                            <span>Возраст 46 лет</span>
+                        </div>
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/location.png" alt="" class="admin-responses-icons">
+                            <span>г.Грозный, пр-т Путина</span>
+                        </div>
+                    </div>
+                    <div class="personal-area-admin__responses-bottom">
+                        <div class="personal-area-admin__responses-detail">Подробно</div>
+                    </div>
+                </div>
+
+                <div class="content-two__vacancies-item responses">
+                    <button class="vacancies__favorites-btn"></button>
+                    <div class="personal-area-admin__responses-title">Петр Семенов</div>
+                    <div class="personal-area-admin__responses-description-title">Описание</div>
+                    <div class="personal-area-admin__responses-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quod quis optio animi est autem ipsa ea eligendi voluptatem repudiandae, commodi nobis, quidem doloribus nihil deserunt. Maxime, inventore nisi! Quibusdam temporibus sed omnis? Aperiam consequuntur cupiditate autem id at, deleniti harum explicabo, recusandae nesciunt sed sapiente? Architecto modi, consequatur sunt impedit aliquid atque ipsa. Accusantium rem sit omnis iure, vero minima hic architecto. Adipisci, sit reprehenderit. Aspernatur vel tempora ullam, sint ab corrupti! Deserunt et, qui sit error aliquid debitis totam distinctio vitae odit nobis, eligendi natus amet dolor alias. Dolores labore quo optio quas. Laudantium et dolorem odit animi explicabo deserunt esse temporibus placeat fuga alias quasi, earum modi blanditiis nisi quia reprehenderit totam est, non perspiciatis aut facilis corrupti, quisquam assumenda. Ea rerum ducimus magnam modi repellat, ad vero, aliquid autem obcaecati necessitatibus culpa porro voluptate tempora repudiandae?
+                    </div>
+                    <div class="personal-area-admin__responses-points-container">
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/profile.png" alt="" class="admin-responses-icons">
+                            <span>Возраст 46 лет</span>
+                        </div>
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/location.png" alt="" class="admin-responses-icons">
+                            <span>г.Грозный, пр-т Путина</span>
+                        </div>
+                    </div>
+                    <div class="personal-area-admin__responses-bottom">
+                        <div class="personal-area-admin__responses-detail">Подробно</div>
+                    </div>
+                </div>
+
+                <div class="content-two__vacancies-item responses">
+                    <button class="vacancies__favorites-btn"></button>
+                    <div class="personal-area-admin__responses-title">Петр Семенов</div>
+                    <div class="personal-area-admin__responses-description-title">Описание</div>
+                    <div class="personal-area-admin__responses-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quod quis optio animi est autem ipsa ea eligendi voluptatem repudiandae, commodi nobis, quidem doloribus nihil deserunt. Maxime, inventore nisi! Quibusdam temporibus sed omnis? Aperiam consequuntur cupiditate autem id at, deleniti harum explicabo, recusandae nesciunt sed sapiente? Architecto modi, consequatur sunt impedit aliquid atque ipsa. Accusantium rem sit omnis iure, vero minima hic architecto. Adipisci, sit reprehenderit. Aspernatur vel tempora ullam, sint ab corrupti! Deserunt et, qui sit error aliquid debitis totam distinctio vitae odit nobis, eligendi natus amet dolor alias. Dolores labore quo optio quas. Laudantium et dolorem odit animi explicabo deserunt esse temporibus placeat fuga alias quasi, earum modi blanditiis nisi quia reprehenderit totam est, non perspiciatis aut facilis corrupti, quisquam assumenda. Ea rerum ducimus magnam modi repellat, ad vero, aliquid autem obcaecati necessitatibus culpa porro voluptate tempora repudiandae?
+                    </div>
+                    <div class="personal-area-admin__responses-points-container">
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/profile.png" alt="" class="admin-responses-icons">
+                            <span>Возраст 46 лет</span>
+                        </div>
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/location.png" alt="" class="admin-responses-icons">
+                            <span>г.Грозный, пр-т Путина</span>
+                        </div>
+                    </div>
+                    <div class="personal-area-admin__responses-bottom">
+                        <div class="personal-area-admin__responses-detail">Подробно</div>
+                    </div>
+                </div>
+
+                <div class="content-two__vacancies-item responses">
+                    <button class="vacancies__favorites-btn"></button>
+                    <div class="personal-area-admin__responses-title">Петр Семенов</div>
+                    <div class="personal-area-admin__responses-description-title">Описание</div>
+                    <div class="personal-area-admin__responses-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quod quis optio animi est autem ipsa ea eligendi voluptatem repudiandae, commodi nobis, quidem doloribus nihil deserunt. Maxime, inventore nisi! Quibusdam temporibus sed omnis? Aperiam consequuntur cupiditate autem id at, deleniti harum explicabo, recusandae nesciunt sed sapiente? Architecto modi, consequatur sunt impedit aliquid atque ipsa. Accusantium rem sit omnis iure, vero minima hic architecto. Adipisci, sit reprehenderit. Aspernatur vel tempora ullam, sint ab corrupti! Deserunt et, qui sit error aliquid debitis totam distinctio vitae odit nobis, eligendi natus amet dolor alias. Dolores labore quo optio quas. Laudantium et dolorem odit animi explicabo deserunt esse temporibus placeat fuga alias quasi, earum modi blanditiis nisi quia reprehenderit totam est, non perspiciatis aut facilis corrupti, quisquam assumenda. Ea rerum ducimus magnam modi repellat, ad vero, aliquid autem obcaecati necessitatibus culpa porro voluptate tempora repudiandae?
+                    </div>
+                    <div class="personal-area-admin__responses-points-container">
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/profile.png" alt="" class="admin-responses-icons">
+                            <span>Возраст 46 лет</span>
+                        </div>
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/location.png" alt="" class="admin-responses-icons">
+                            <span>г.Грозный, пр-т Путина</span>
+                        </div>
+                    </div>
+                    <div class="personal-area-admin__responses-bottom">
+                        <div class="personal-area-admin__responses-detail">Подробно</div>
+                    </div>
+                </div>
+
+                <div class="content-two__vacancies-item responses">
+                    <button class="vacancies__favorites-btn"></button>
+                    <div class="personal-area-admin__responses-title">Петр Семенов</div>
+                    <div class="personal-area-admin__responses-description-title">Описание</div>
+                    <div class="personal-area-admin__responses-description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe quod quis optio animi est autem ipsa ea eligendi voluptatem repudiandae, commodi nobis, quidem doloribus nihil deserunt. Maxime, inventore nisi! Quibusdam temporibus sed omnis? Aperiam consequuntur cupiditate autem id at, deleniti harum explicabo, recusandae nesciunt sed sapiente? Architecto modi, consequatur sunt impedit aliquid atque ipsa. Accusantium rem sit omnis iure, vero minima hic architecto. Adipisci, sit reprehenderit. Aspernatur vel tempora ullam, sint ab corrupti! Deserunt et, qui sit error aliquid debitis totam distinctio vitae odit nobis, eligendi natus amet dolor alias. Dolores labore quo optio quas. Laudantium et dolorem odit animi explicabo deserunt esse temporibus placeat fuga alias quasi, earum modi blanditiis nisi quia reprehenderit totam est, non perspiciatis aut facilis corrupti, quisquam assumenda. Ea rerum ducimus magnam modi repellat, ad vero, aliquid autem obcaecati necessitatibus culpa porro voluptate tempora repudiandae?
+                    </div>
+                    <div class="personal-area-admin__responses-points-container">
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/profile.png" alt="" class="admin-responses-icons">
+                            <span>Возраст 46 лет</span>
+                        </div>
+                        <div class="personal-area-admin__responses-points">
+                            <img src="/img/location.png" alt="" class="admin-responses-icons">
+                            <span>г.Грозный, пр-т Путина</span>
+                        </div>
+                    </div>
+                    <div class="personal-area-admin__responses-bottom">
+                        <div class="personal-area-admin__responses-detail">Подробно</div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/select.js"></script>
+</body>
+</html>

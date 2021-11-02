@@ -275,12 +275,12 @@ a{
     position: relative;
     padding: 30px;
     border-radius: 12px;
-    border: 1px solid #A5A1B2;
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 40px;
+    box-shadow: 5px 5px 30px #a5a1b277;
 }
 
 .vacancies__favorites-btn, .content-two__vacancies-icon{
@@ -300,25 +300,21 @@ a{
 }
 
 .vacancies__favorites-btn:hover{
-    /* background: url(/img/favorites-btn_active.png) no-repeat; */
     transform: scale(1.1);    
 }
 
 .vacancies__favorites-btn.active{
     background: url(/img/favorites-btn_active.png) no-repeat;
 }
-/* .vacancies__favorites-btn.active:hover{
-    background: url(/img/favorites-btn.png) no-repeat;
-} */
+
 
 .content-two__vacancies-icon{
     bottom: 30px;
 }
 
 .content-two__vacancies-top{
-    width: 80%;
+    width: 98%;
     position: relative;
-    margin-bottom: 30px;
 }
 
 .content-two__vacancies-title{
@@ -336,9 +332,14 @@ a{
 }
 
 .content-two__vacancies-subtitle{
+    height: 85px;
+    overflow: hidden;
     font-size: 18px;
-    line-height: 22px;
-    font-weight: 600;
+    font-weight:500;
+    color: #4C4955;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .content-two__vacancies-response-btn, .content-two__vacancies-call-btn{
@@ -377,7 +378,6 @@ a{
 .content__filters{
     margin-top: 40px;
     display: flex;
-    /* justify-content: space-between; */
     height: 48px;
 }
 .content__filters-container{
@@ -2401,8 +2401,16 @@ input{
     background-color: #5B04B2;
 }
 
+.personal-area-admin__sidebar-item:hover{
+    color: #fff;
+    background-color: #5B04B2;
+}
+
+
+
 .personal-area-admin__right{
     margin-left: 270px;
+    width: 100%;
 }
 
 .personal-area-admin__title{
@@ -2427,5 +2435,234 @@ input{
 }
 
 .header__btn-added-vacancies:hover{
+    background-color: #380e63;
+}
+
+
+/* personal-area-admin-responses */
+
+.content-two__vacancies-item.responses{
+    height: auto;
+}
+
+.personal-area-admin__responses-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #5B04B2;
+    margin-bottom: 20px;
+}
+
+.personal-area-admin__responses-description-title{
+    font-size: 20px;
+    color: #470c83;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.personal-area-admin__responses-description{
+    height: 85px;
+    overflow: hidden;
+    max-width: 988px;
+    font-size: 18px;
+    font-weight:500;
+    color: #4C4955;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.personal-area-admin__responses-points{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.admin-responses-icons{
+    width: 30px;
+    height: 30px;
+    margin-right: 16px;
+}
+
+.personal-area-admin__responses-points{
+    font-size: 18px;
+    font-weight: 600;
+    color: #4f2778;
+}
+
+.personal-area-admin__responses-points-container{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personal-area-admin__responses-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.personal-area-admin__responses-detail, .personal-area-admin__responses-vacancies{
+    padding: 17px 46px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: .3s all;
+    cursor: pointer;
+}
+
+.personal-area-admin__responses-detail{
+    color: #fff;
+    background-color: #5B04B2;
+}
+
+.personal-area-admin__responses-detail:hover{
+    background-color: #380e63;
+}
+
+.personal-area-admin__responses-vacancies{
+    color: #380e63;
+    text-transform: uppercase;
+    background-color: #EFEDF0;
+}
+
+.personal-area-admin__responses-vacancies:hover{
+    text-transform: uppercase;
+    background-color: #dadada;
+    box-shadow: 2px 5px 30px #a5a1b27a;
+}
+
+.personal-area-admin__categories-add-continer{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-radius: 10px;
+    border: 2px solid #BDB2C9;
+    transition: .3s all;
+}
+
+.personal-area-admin__categories-add-input{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #26004D;
+    width: 100%;
+
+}
+
+.personal-area-admin__categories-add-container:focus-within{
+    border-color: #2c0257;
+}
+
+.personal-area-admin__categories-add-clean{
+    width: 28px;
+    height: 28px;
+    position: relative;
+    cursor: pointer;
+}
+
+.personal-area-admin__categories-add-clean::before, .personal-area-admin__categories-add-clean::after{
+    content: " ";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background-color: #BDB2C9;
+    top: calc(50% - 2px);
+    transition: .3s all;   
+}
+
+.personal-area-admin__categories-add-clean::before{
+    transform: rotate(45deg);
+}
+
+.personal-area-admin__categories-add-clean::after{
+    transform: rotate(-45deg);
+}
+
+
+.personal-area-admin__categories-add-btn{
+    padding: 17px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: .3s all;
+    cursor: pointer;
+    background-color: #7305E2;
+    text-align:center;
+    max-width: 300px;
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.personal-area-admin__categories-add-btn:hover{
+    background-color: #380e63;
+}
+
+.personal-area-admin__categories-table{
+    height: 480px;
+    border: 2px solid #BDB2C9;
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.personal-area-admin__categories-table-line{
+    padding: 12px 20px;
+    border-bottom: 2px solid #BDB2C9;
+    font-size: 18px;
+    font-weight: 600;
+    color: #26004D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personal-area-admin__categories-table-clean{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.personal-area-admin__categories-table-clean::before, .personal-area-admin__categories-table-clean::after{
+    content: " ";
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background-color: #26004D;
+    top: calc(50% - 2px);
+    transition: .3s all;   
+}
+
+.personal-area-admin__categories-table-clean::before{
+    transform: rotate(45deg);
+}
+
+.personal-area-admin__categories-table-clean::after{
+    transform: rotate(-45deg);
+}
+
+.personal-area-admin__clean-all{
+    padding: 17px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: .3s all;
+    cursor: pointer;
+    background-color: #7305E2;
+    max-width: 300px;
+    color: #fff;
+    margin-top: 25px;
+    text-align:center;
+    margin-left: auto;
+}
+
+.personal-area-admin__clean-all:hover{
     background-color: #380e63;
 }
